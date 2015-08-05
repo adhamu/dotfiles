@@ -47,11 +47,4 @@ source $ZSH/oh-my-zsh.sh
 #---------------------------------------#
 source ~/.aliases
 source ~/.functions
-
-#---------------------------------------#
-#               Exports                 #
-#---------------------------------------#
-export PATH="$(brew --prefix)/bin:$PATH"
-export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/sbin:/Users/amit/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/amit/pear/bin:/Users/amit/.rvm/bin:~/.composer/vendor/bin:/usr/local/go/bin
-
-export HISTTIMEFORMAT="%d/%m/%y %T"
+source ~/.exports

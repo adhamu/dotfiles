@@ -1,0 +1,15 @@
+#---------------------------------------#
+#               Path	                #
+#---------------------------------------#
+export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/sbin:/Users/amit/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/amit/pear/bin:/Users/amit/.rvm/bin:~/.composer/vendor/bin:/usr/local/go/bin
+
+#---------------------------------------#
+#               Homebrew                #
+#---------------------------------------#
+export PATH="$(brew --prefix)/bin:$PATH"
+export HOMEBREW_GITHUB_API_TOKEN=f9bbb9c78467d8f68f951e55bf0255a646d313ea
+
+#---------------------------------------#
+#               Misc	                #
+#---------------------------------------#
+export HISTTIMEFORMAT="%d/%m/%y %T"

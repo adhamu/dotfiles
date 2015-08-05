@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Borrowed from Paul Irish (https://github.com/paulirish/dotfiles)
+
 #---------------------------------------#
 #           General UI/UX               #
 #---------------------------------------#

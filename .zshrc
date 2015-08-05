@@ -118,25 +118,25 @@ alias space='du -sk * | sort -rn | head'
 export 'hash=#'
 
 # Proxies
-proxy() { 
-	if [[ "${http_proxy:-NOTSET}" != "NOTSET" ]]; then 
-		unset http_proxy && unset https_proxy && unset HTTP_PROXY && unset HTTPS_PROXY; 
+proxy() {
+	if [[ "${http_proxy:-NOTSET}" != "NOTSET" ]]; then
+		unset http_proxy && unset https_proxy && unset HTTP_PROXY && unset HTTPS_PROXY;
 		npm config set http-proxy null;
 		npm config set https-proxy null;
 		git config --global --unset http.proxy;
 		git config --global --unset https.proxy;
-		echo "No proxy."; 
-	else 
+		echo "No proxy.";
+	else
 		export http_proxy=http://192.168.222.88:8080 && export https_proxy=http://192.168.222.88:8080 && export HTTP_PROXY=http://192.168.222.88:8080 && export HTTPS_PROXY=http://192.168.222.88:8080;
 		npm config set http-proxy "http://192.168.222.88:8080";
 		npm config set https-proxy "http://192.168.222.88:8080";
-		git config --global http.proxy http://192.168.222.88:8080;  
-		git config --global https.proxy http://192.168.222.88:8080; 
+		git config --global http.proxy http://192.168.222.88:8080;
+		git config --global https.proxy http://192.168.222.88:8080;
 		echo "http_proxy = $http_proxy";
-		echo "https_proxy = $https_proxy"; 
+		echo "https_proxy = $https_proxy";
 		echo "HTTP_PROXY = $HTTP_PROXY";
 		echo "HTTPS_PROXY = $HTTPS_PROXY";
-	fi; 
+	fi;
 }
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:/usr/local/go/bin

@@ -1,17 +1,17 @@
 #---------------------------------------#
-#				Symfony					#
+#               Symfony                 #
 #---------------------------------------#
 alias sf2='php app/console'
 alias sf2clear='php app/console cache:clear'
 
 #---------------------------------------#
-#				Laravel					#
+#               Laravel                 #
 #---------------------------------------#
 alias art="php artisan"
 alias arthelp="php artisan --help"
 
 #---------------------------------------#
-#				 Git					#
+#                Git                    #
 #---------------------------------------#
 alias g=git
 alias ga='git add'
@@ -43,13 +43,13 @@ alias gss='git status -s'
 alias gst='git status'
 
 #---------------------------------------#
-#				Vagrant					#
+#               Vagrant                 #
 #---------------------------------------#
 alias vu="vagrant up"
 alias vs="vagrant suspend"
 
 #---------------------------------------#
-#				OS X					#
+#               OS X                    #
 #---------------------------------------#
 alias show_hidden='defaults write com.apple.finder AppleShowAllFiles -boolean true && killall Finder'
 alias hide_hidden='defaults write com.apple.finder AppleShowAllFiles -boolean false && killall Finder'
@@ -59,7 +59,7 @@ alias dl_history="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.Quarant
 alias delete_dl_history="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
 #---------------------------------------#
-#				Misc					#
+#               Misc                    #
 #---------------------------------------#
 alias zsrc='source ~/.zshrc'
 alias zedit='vim ~/.zshrc'

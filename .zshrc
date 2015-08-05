@@ -1,5 +1,5 @@
 #---------------------------------------#
-#				Oh My ZSH				#
+#               Oh My ZSH               #
 #---------------------------------------#
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="pure"
@@ -43,13 +43,13 @@ plugins=(osx zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 #---------------------------------------#
-#				Sources					#
+#               Sources                 #
 #---------------------------------------#
 source ~/.aliases
 source ~/.functions
 
 #---------------------------------------#
-#				Exports					#
+#               Exports                 #
 #---------------------------------------#
 export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/local/go/bin:/Users/amit/.rvm/bin:/Users/amit/.composer/vendor/bin
 export HISTTIMEFORMAT="%d/%m/%y %T "

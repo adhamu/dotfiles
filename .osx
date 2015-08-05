@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-###############################################################################
-# General UI/UX                                                               #
-###############################################################################
+#---------------------------------------#
+#           General UI/UX               #
+#---------------------------------------#
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
@@ -18,9 +18,9 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
-###############################################################################
-# SSD-specific tweaks                                                         #
-###############################################################################
+#---------------------------------------#
+#         SSD Specific Tweaks           #
+#---------------------------------------#
 
 # Disable local Time Machine snapshots
 #sudo tmutil disablelocal
@@ -38,9 +38,9 @@ sudo pmset -a hibernatemode 0
 # Disable the sudden motion sensor as it’s not useful for SSDs
 sudo pmset -a sms 0
 
-###############################################################################
-# Screen                                                                      #
-###############################################################################
+#---------------------------------------#
+#               Screen                  #
+#---------------------------------------#
 
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
@@ -48,9 +48,9 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
-###############################################################################
-# Finder                                                                      #
-###############################################################################
+#---------------------------------------#
+#               Finder                  #
+#---------------------------------------#
 
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -74,23 +74,23 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
-###############################################################################
-# Terminal & iTerm 2                                                          #
-###############################################################################
+#---------------------------------------#
+#           iTerm2 & Terminal           #
+#---------------------------------------#
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
-###############################################################################
-# Activity Monitor                                                            #
-###############################################################################
+#---------------------------------------#
+#           Acitivity Monitor           #
+#---------------------------------------#
 
 # Visualize CPU usage in the Activity Monitor Dock icon
 defaults write com.apple.ActivityMonitor IconType -int 5
 
-###############################################################################
-# Mac App Store                                                               #
-###############################################################################
+#---------------------------------------#
+#           Mac App Store               #
+#---------------------------------------#
 
 # Enable the WebKit Developer Tools in the Mac App Store
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true

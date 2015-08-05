@@ -41,10 +41,3 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(osx zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-
-#---------------------------------------#
-#               Sources                 #
-#---------------------------------------#
-source ~/.aliases
-source ~/.functions
-source ~/.exports

@@ -68,54 +68,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Aliases
-alias sf2='php app/console'
-alias sf2clear='php app/console cache:clear'
-alias show_hidden='defaults write com.apple.finder AppleShowAllFiles -boolean true && killall Finder'
-alias hide_hidden='defaults write com.apple.finder AppleShowAllFiles -boolean false && killall Finder'
-alias zsrc='source ~/.zshrc'
-alias zedit='vim ~/.zshrc'
-alias lessc_dir='for file in *.less; do lessc -x -O2 --strict-imports $file `basename ${file%%.*}`.css ; done'
-alias dl_history="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
-alias delete_dl_history="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
-alias show_finder_statusbar="defaults write com.apple.finder ShowStatusBar -bool true;killall Finder"
-alias hide_finder_statusbar="defaults write com.apple.finder ShowStatusBar -bool false;killall Finder"
-alias dl_laracasts="php ~/Development/laracast-download/laracast-download.php"
-alias glogme="glog --author='Amit Dhamu'"
-alias art="php artisan"
-alias arthelp="php artisan --help"
-alias vu="vagrant up"
-alias vs="vagrant suspend"
-alias iterm_themes="~/Dropbox/iTerm\ Colour\ Schemes/tools/preview.rb ~/Dropbox/iTerm\ Colour\ Schemes/schemes/*"
-alias g=git
-alias ga='git add'
-alias gaa='git add --all'
-alias gb='git branch'
-alias gc='git commit'
-alias gca='git commit -a'
-alias gcb='git checkout -b'
-alias gcf='git config --list'
-alias gco='git checkout'
-alias gcount='git shortlog -sn'
-alias gd='git diff'
-alias gf='git fetch'
-alias gl='git pull'
-alias glg='git log --stat --color'
-alias glgg='git log --graph --color'
-alias glgga='git log --graph --decorate --all'
-alias glgm='git log --graph --max-count=10'
-alias glgp='git log --stat --color -p'
-alias glo='git log --oneline --decorate --color'
-alias glog='git log --oneline --decorate --color --graph'
-alias glol='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
-alias glola='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --all'
-alias glp=_git_log_prettily
-alias gm='git merge'
-alias gp='git push'
-alias gss='git status -s'
-alias gst='git status'
-alias space='du -sk * | sort -rn | head'
-
-export 'hash=#'
+source ~/.aliases
 
 # Proxies
 proxy() {

@@ -51,5 +51,7 @@ source ~/.functions
 #---------------------------------------#
 #               Exports                 #
 #---------------------------------------#
-export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/local/go/bin:/Users/amit/.rvm/bin:/Users/amit/.composer/vendor/bin
-export HISTTIMEFORMAT="%d/%m/%y %T "
+export PATH="$(brew --prefix)/bin:$PATH"
+export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/sbin:/Users/amit/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/amit/pear/bin:/Users/amit/.rvm/bin:~/.composer/vendor/bin:/usr/local/go/bin
+
+export HISTTIMEFORMAT="%d/%m/%y %T"

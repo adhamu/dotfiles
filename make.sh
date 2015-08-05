@@ -7,7 +7,7 @@ then
 else
 	# Variables
 	dir=$1
-	files="bash_profile bashrc bash_rc vimrc vim osx zshrc profile aliases"
+	files="bash_profile bashrc bash_rc vimrc vim osx zshrc profile aliases functions"
 
 	# Create new dotfiles directory
 	cd ~

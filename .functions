@@ -10,11 +10,11 @@ function proxy() {
         git config --global --unset https.proxy;
         echo "No proxy.";
     else
-        export http_proxy=http://192.168.222.88:8080 && export https_proxy=http://192.168.222.88:8080 && export HTTP_PROXY=http://192.168.222.88:8080 && export HTTPS_PROXY=http://192.168.222.88:8080;
-        npm config set http-proxy "http://192.168.222.88:8080";
-        npm config set https-proxy "http://192.168.222.88:8080";
-        git config --global http.proxy http://192.168.222.88:8080;
-        git config --global https.proxy http://192.168.222.88:8080;
+        export http_proxy=http://192.168.222.5:8080 && export https_proxy=http://192.168.222.5:8080 && export HTTP_PROXY=http://192.168.222.5:8080 && export HTTPS_PROXY=http://192.168.222.5:8080;
+        npm config set http-proxy "http://192.168.222.5:8080";
+        npm config set https-proxy "http://192.168.222.5:8080";
+        git config --global http.proxy http://192.168.222.5:8080;
+        git config --global https.proxy http://192.168.222.5:8080;
         echo "http_proxy = $http_proxy";
         echo "https_proxy = $https_proxy";
         echo "HTTP_PROXY = $HTTP_PROXY";

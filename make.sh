@@ -11,15 +11,16 @@ else
 
     # Create new dotfiles directory
     cd ~
+    echo "Creating $dir"
     mkdir -p $dir
 
     for file in $files; do
         # Move existing dotfiles to newly created directory
-        echo "Moving any existing dotfiles to $dir..."
+        echo "Moving .$file to ~/$dir/"
         mv ~/.$file ~/$dir/
 
         # Create symlink to moved dotfiles
-        echo "Creating symlink to $file in home directory..."
+        echo "Symlinking ~/.$file to ~/$dir/.$file"
         ln -sf ~/$dir/.$file ~/.$file
     done
 fi

@@ -2,7 +2,7 @@
 #               Oh My ZSH               #
 #---------------------------------------#
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="pure"
+ZSH_THEME="powerline"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -44,3 +44,12 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
 
 export TERM='xterm-256color'
+
+function _update_ps1()
+{
+    export PROMPT="$(~/dotfiles/plugins/powerline-zsh/powerline-zsh.py $?)"
+}
+precmd()
+{
+    _update_ps1
+}

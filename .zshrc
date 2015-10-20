@@ -42,3 +42,5 @@ plugins=(osx zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
+
+export TERM='xterm-256color'

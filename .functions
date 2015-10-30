@@ -1,24 +1,45 @@
 #---------------------------------------#
+#          ANSI Escape Codes            #
+#---------------------------------------#
+# Black        0;30     Dark Gray     1;30
+# Red          0;31     Light Red     1;31
+# Green        0;32     Light Green   1;32
+# Brown/Orange 0;33     Yellow        1;33
+# Blue         0;34     Light Blue    1;34
+# Purple       0;35     Light Purple  1;35
+# Cyan         0;36     Light Cyan    1;36
+# Light Gray   0;37     White         1;37
+
+#---------------------------------------#
 #               Proxy                   #
 #---------------------------------------#
 function proxy() {
+
+    PROXY=192.168.222.5:8080;
+    RED='\033[0;31m';
+    GREEN='\033[0;32m';
+    DEFAULT='\033[0m';
+
     if [[ "${http_proxy:-NOTSET}" != "NOTSET" ]]; then
-        unset http_proxy && unset https_proxy && unset HTTP_PROXY && unset HTTPS_PROXY;
+        unset http_proxy;
+        unset https_proxy;
+        unset HTTP_PROXY;
+        unset HTTPS_PROXY;
         npm config set http-proxy null;
         npm config set https-proxy null;
         git config --global --unset http.proxy;
         git config --global --unset https.proxy;
-        echo "No proxy.";
+        echo "${RED}PROXY • $PROXY • DISABLED";
     else
-        export http_proxy=http://192.168.222.5:8080 && export https_proxy=http://192.168.222.5:8080 && export HTTP_PROXY=http://192.168.222.5:8080 && export HTTPS_PROXY=http://192.168.222.5:8080;
-        npm config set http-proxy "http://192.168.222.5:8080";
-        npm config set https-proxy "http://192.168.222.5:8080";
-        git config --global http.proxy http://192.168.222.5:8080;
-        git config --global https.proxy http://192.168.222.5:8080;
-        echo "http_proxy = $http_proxy";
-        echo "https_proxy = $https_proxy";
-        echo "HTTP_PROXY = $HTTP_PROXY";
-        echo "HTTPS_PROXY = $HTTPS_PROXY";
+        export http_proxy=http://$PROXY;
+        export https_proxy=http://$PROXY;
+        export HTTP_PROXY="$PROXY";
+        export HTTPS_PROXY="$PROXY";
+        npm config set http-proxy "http://$PROXY";
+        npm config set https-proxy "http://$PROXY";
+        git config --global http.proxy http://$PROXY;
+        git config --global https.proxy http://$PROXY;
+        echo "${GREEN}PROXY • $PROXY • ENABLED";
     fi;
 }
 

@@ -2,7 +2,7 @@
 #               Oh My ZSH               #
 #---------------------------------------#
 ZSH=$HOME/.oh-my-zsh
-#ZSH_THEME="powerline"
+ZSH_THEME="pure"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -46,17 +46,17 @@ source ~/.bash_profile
 export TERM='xterm-256color'
 
 # POWERLINE OPTIONS #
-POWERLINE_RIGHT_A="date"
-POWERLINE_RIGHT_A_COLOR_FRONT="black"
-POWERLINE_RIGHT_A_COLOR_BACK="red"
-POWERLINE_RIGHT_B_COLOR_FRONT="black"
-POWERLINE_RIGHT_B_COLOR_BACK="black"
-POWERLINE_NO_BLANK_LINE="true"
-function _update_ps1()
-{
-    export PROMPT="$(~/dotfiles/plugins/powerline-zsh/powerline-zsh.py $?)"
-}
-precmd()
-{
-    _update_ps1
-}
+# POWERLINE_RIGHT_A="date"
+# POWERLINE_RIGHT_A_COLOR_FRONT="black"
+# POWERLINE_RIGHT_A_COLOR_BACK="red"
+# POWERLINE_RIGHT_B_COLOR_FRONT="black"
+# POWERLINE_RIGHT_B_COLOR_BACK="black"
+# POWERLINE_NO_BLANK_LINE="true"
+# function _update_ps1()
+# {
+#    export PROMPT="$(~/dotfiles/plugins/powerline-zsh/powerline-zsh.py $?)"
+# }
+# precmd()
+# {
+#    _update_ps1
+# }

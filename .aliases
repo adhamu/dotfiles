@@ -64,3 +64,5 @@ alias delete_dl_history="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.
 alias zsrc='source ~/.zshrc'
 alias zedit='vim ~/.zshrc'
 alias iterm_themes="~/Dropbox/iTerm\ Colour\ Schemes/tools/preview.rb ~/Dropbox/iTerm\ Colour\ Schemes/schemes/*"
+alias localip="ipconfig getifaddr en0"
+alias genpw="pwgen -Cs 20 1 | tr -d ' ' | tr -d '\n'"

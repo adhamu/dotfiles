@@ -92,7 +92,7 @@ open /System/Library/CoreServices/PowerChime.app
 #defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 #---------------------------------------#
-#           Acitivity Monitor           #
+#           Activity Monitor           #
 #---------------------------------------#
 
 # Visualize CPU usage in the Activity Monitor Dock icon

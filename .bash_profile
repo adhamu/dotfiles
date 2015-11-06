@@ -1,7 +1,7 @@
 #!/bin/bash
 YELLOW='\033[1;33m';
 
-for file in ~/.{extras,exports,aliases,functions,osx}; do
+for file in ~/.{extras,exports,aliases,functions}; do
     if [ -f "$file" ]
     then
 	   source "$file"

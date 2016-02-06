@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/Amit/Development'
+let g:netrw_dirhist_2='/Users/Amit/Development/symflex'
+let g:netrw_dirhist_3='/Users/Amit/Development'
+let g:netrw_dirhist_4='/Users/Amit'
+let g:netrw_dirhist_5='/Users'
+let g:netrw_dirhist_6='/Users/Amit'

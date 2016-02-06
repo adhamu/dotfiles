@@ -1,3 +1,7 @@
+set nocompatible
+
+so ~/.vim/plugins.vim
+
 syntax on
 set nu
 colorscheme peachpuff
@@ -41,7 +45,7 @@ syntax on
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
-set tabstop=2
+set tabstop=4
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
@@ -92,4 +96,23 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
     " Treat .md files as Markdown
     autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+		" Auto source vimrc on save
+	augroup autosourcing
+		autocmd!
+		autocmd BufWritePost .vimrc source %
+	augroup END
 endif
+
+" -- Split Management --
+set splitbelow
+set splitright
+
+" -- Keyboard mappings
+nmap <c-L> :NERDTreeToggle<cr>
+nmap <c-R> :CtrlPBufTag<cr>
+nmap <c-E> :CtrlPMRUFiles<cr>
+
+"====== Plugin settings ========
+"
+" CTRLP
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'

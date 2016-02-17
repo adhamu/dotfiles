@@ -1104,7 +1104,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>280 291 924 485 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>70 121 1193 726 0 0 1440 877 </string>
+	<string>1 206 920 666 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1845,7 +1845,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>474327104.09837002</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>474327104.09867501</real>
+	<real>476784761.49841702</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1854,6 +1854,8 @@
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PassOnControlClick</key>
 	<false/>
 	<key>PasteFromClipboard</key>
@@ -1908,7 +1910,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-01-12T21:31:33Z</date>
+	<date>2016-02-10T08:12:36Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1945,6 +1947,10 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
 	<string>2.1.4</string>
 </dict>

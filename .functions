@@ -15,7 +15,7 @@
 #---------------------------------------#
 function proxy() {
 
-    PROXY=192.168.222.5:8080;
+    PROXY=proxy-dev.cpwos.com:3128;
     RED='\033[0;31m';
     GREEN='\033[0;32m';
     DEFAULT='\033[0m';

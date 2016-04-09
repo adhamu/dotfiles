@@ -7,3 +7,4 @@ export PATH="$(brew --prefix)/bin:$PATH"
 #               Misc	                #
 #---------------------------------------#
 export HISTTIMEFORMAT="%d/%m/%y %T"
+export EDITOR=vim

@@ -2,7 +2,7 @@
 
 if [ -z "$1" ]
 then
-    echo Usage: `basename $0` "[custom_theme_path]" 1>&2
+    echo Usage: `basename $0` "[absolute_custom_theme_path]" 1>&2
     exit 1
 else
     DIR=`dirname $1`

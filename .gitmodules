@@ -1,0 +1,3 @@
+[submodule "plugins/honukai-iterm-zsh"]
+	path = plugins/honukai-iterm-zsh
+	url = https://github.com/oskarkrawczyk/honukai-iterm-zsh.git

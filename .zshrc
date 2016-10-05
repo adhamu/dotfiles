@@ -2,7 +2,7 @@
 #               Oh My ZSH               #
 #---------------------------------------#
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="honukai"
+ZSH_THEME="pure"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

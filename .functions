@@ -13,12 +13,12 @@
 #---------------------------------------#
 #               Proxy                   #
 #---------------------------------------#
-function proxy() {
+RED='\033[0;31m';
+GREEN='\033[0;32m';
+DEFAULT='\033[0m';
 
+function proxy() {
     PROXY=proxy-dev.cpwos.com:3128;
-    RED='\033[0;31m';
-    GREEN='\033[0;32m';
-    DEFAULT='\033[0m';
 
     if [[ "${http_proxy:-NOTSET}" != "NOTSET" ]]; then
         unset http_proxy;
@@ -41,6 +41,21 @@ function proxy() {
         git config --global https.proxy http://$PROXY;
         echo "${GREEN}PROXY • $PROXY • ENABLED";
     fi;
+}
+
+function fixHipChat() {
+    defaults delete com.hipchat.HipChat;
+
+    rm ~/Library/Preferences/com.hipchat.HipChat.plist;
+    rm -rf ~/Library/HipChat/;
+    rm -rf ~/Library/Application\ Support/hipchat/;
+    rm -rf ~/Library/Application\ Support/com.hipchat.HipChat;
+    rm -rf ~/Library/Caches/HipChat;
+    rm -rf ~/Library/Caches/com.hipchat.HipChat/;
+    rm -rf ~/Library/Saved\ Application\ State/com.hipchat.HipChat.savedState;
+    rm -rf ~/Library/WebKit/com.hipchat.HipChat;
+
+    echo "${GREEN}HipChat Fixed Yo! Make sure you restart";
 }
 
 #---------------------------------------#

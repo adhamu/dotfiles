@@ -33,8 +33,8 @@ function proxy() {
     else
         export http_proxy=http://$PROXY;
         export https_proxy=http://$PROXY;
-        export HTTP_PROXY="$PROXY";
-        export HTTPS_PROXY="$PROXY";
+        export HTTP_PROXY="http://$PROXY";
+        export HTTPS_PROXY="http://$PROXY";
         npm config set http-proxy "http://$PROXY";
         npm config set https-proxy "http://$PROXY";
         git config --global http.proxy http://$PROXY;

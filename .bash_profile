@@ -5,7 +5,7 @@ for file in ~/.{extras,exports,aliases,functions}; do
     if [ -f "$file" ]
     then
 	   source "$file"
-       echo "${YELLOW}Sourced $file";
     fi
 done
+echo "${YELLOW}Dotfiles sourced. Ready!";
 unset file

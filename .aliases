@@ -65,5 +65,5 @@ alias zsrc='source ~/.zshrc'
 alias zedit='vim ~/.zshrc'
 alias iterm_themes="~/Dropbox/iTerm\ Colour\ Schemes/tools/preview.rb ~/Dropbox/iTerm\ Colour\ Schemes/schemes/*"
 alias localip="ipconfig getifaddr en0"
-alias genpw="pwgen -Cs 20 1 | tr -d ' ' | tr -d '\n'"
+alias genpw="openssl rand -base64 32"
 alias apt="sudo apt-get update && sudo apt-get upgrade"

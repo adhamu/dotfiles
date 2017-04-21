@@ -5,6 +5,7 @@ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | 
 
 # Brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update && brew upgrade
 
 # Composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -14,6 +15,9 @@ php -r "unlink('composer-setup.php');"
 
 # Node
 brew install node
+
+# Python 3
+brew install python3
 
 # NPM packages
 npm install -g yarn gulp bower diff-so-fancy nativefier git-recent localtunnel nodemon pm2

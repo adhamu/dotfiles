@@ -60,3 +60,6 @@ export TERM='xterm-256color'
 # {
 #    _update_ps1
 # }
+
+
+source "/Users/amitdhamu/.oh-my-zsh/custom/themes/spaceship.zsh-theme"

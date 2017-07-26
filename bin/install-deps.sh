@@ -25,3 +25,6 @@ npm install -g yarn gulp bower diff-so-fancy nativefier git-recent localtunnel n
 # Brew packages
 brew cask install google-chrome firefox iterm2 mysqlworkbench sublime-text skype hipchat tunnelblick vlc
 brew install wget p7zip ssh-copy-id tmux
+
+# Google Music Manager
+pip3 install gmusicapi-scripts

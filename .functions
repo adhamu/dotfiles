@@ -58,6 +58,20 @@ function fixHipChat() {
     echo "${GREEN}HipChat Fixed Yo! Make sure you restart";
 }
 
+function gitstep() {
+    if [ -z "$1" ]; then
+        echo "${RED}You need to provide a branch name"
+    else
+        BRANCH=$1;
+        echo "${GREEN}Stepping through branch: ${BRANCH}";
+        for commit in $(git rev-list ${BRANCH} --reverse)
+        do
+            git checkout $commit
+            read;
+        done;
+    fi;
+}
+
 #---------------------------------------#
 #           Coloured Man Pages          #
 #---------------------------------------#

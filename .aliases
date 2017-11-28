@@ -46,7 +46,10 @@ alias gst='git status'
 #               Vagrant                 #
 #---------------------------------------#
 alias vu="vagrant up"
+alias vr="vagrant reload"
+alias vp="vagrant provision"
 alias vs="vagrant suspend"
+alias vsh="vagrant ssh"
 
 #---------------------------------------#
 #               OS X                    #

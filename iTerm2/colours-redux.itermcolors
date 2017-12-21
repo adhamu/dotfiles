@@ -37,9 +37,9 @@
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>0.83137255907058716</real>
-		<key>Red Component</key>
 		<real>1</real>
+		<key>Red Component</key>
+		<real>0.070588238537311554</real>
 	</dict>
 	<key>Ansi 11 Color</key>
 	<dict>
@@ -115,9 +115,9 @@
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>0.83137255907058716</real>
-		<key>Red Component</key>
 		<real>1</real>
+		<key>Red Component</key>
+		<real>0.070588238537311554</real>
 	</dict>
 	<key>Ansi 3 Color</key>
 	<dict>
@@ -258,9 +258,9 @@
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>1</real>
+		<real>0.83137255907058716</real>
 		<key>Red Component</key>
-		<real>0.070588238537311554</real>
+		<real>1</real>
 	</dict>
 	<key>Cursor Guide Color</key>
 	<dict>
@@ -310,9 +310,9 @@
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>1</real>
+		<real>0.83137255907058716</real>
 		<key>Red Component</key>
-		<real>0.069427490234375</real>
+		<real>1</real>
 	</dict>
 	<key>Selected Text Color</key>
 	<dict>

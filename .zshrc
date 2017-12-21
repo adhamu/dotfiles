@@ -2,7 +2,10 @@ source $HOME/antigen.zsh
 source $HOME/.bash_profile
 
 antigen use oh-my-zsh
-antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
+
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+
 antigen bundle git
 antigen bundle osx
 antigen bundle zsh-users/zsh-autosuggestions

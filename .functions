@@ -43,19 +43,18 @@ function proxy() {
     fi;
 }
 
-function fixHipChat() {
-    defaults delete com.hipchat.HipChat;
-
-    rm ~/Library/Preferences/com.hipchat.HipChat.plist;
-    rm -rf ~/Library/HipChat/;
-    rm -rf ~/Library/Application\ Support/hipchat/;
-    rm -rf ~/Library/Application\ Support/com.hipchat.HipChat;
-    rm -rf ~/Library/Caches/HipChat;
-    rm -rf ~/Library/Caches/com.hipchat.HipChat/;
-    rm -rf ~/Library/Saved\ Application\ State/com.hipchat.HipChat.savedState;
-    rm -rf ~/Library/WebKit/com.hipchat.HipChat;
-
-    echo "${GREEN}HipChat Fixed Yo! Make sure you restart";
+function gitstep() {
+    if [ -z "$1" ]; then
+        echo "${RED}You need to provide a branch name"
+    else
+        BRANCH=$1;
+        echo "${GREEN}Stepping through branch: ${BRANCH}";
+        for commit in $(git rev-list ${BRANCH} --reverse)
+        do
+            git checkout $commit
+            read;
+        done;
+    fi;
 }
 
 #---------------------------------------#

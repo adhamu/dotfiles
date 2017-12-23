@@ -3,6 +3,9 @@
 # ZSH
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
+# Antigen
+curl -L git.io/antigen > ~/antigen.zsh
+
 # Brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update && brew upgrade
@@ -24,4 +27,7 @@ npm install -g yarn gulp bower diff-so-fancy nativefier git-recent localtunnel n
 
 # Brew packages
 brew cask install google-chrome firefox iterm2 mysqlworkbench sublime-text skype hipchat tunnelblick vlc
-brew install wget p7zip ssh-copy-id tmux
+brew install wget p7zip ssh-copy-id youtube-dl
+
+# Google Music Manager
+pip3 install gmusicapi-scripts

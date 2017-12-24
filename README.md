@@ -20,7 +20,7 @@
 
 
 | Symlink           | Original File                             |
-| ----------------- | ----------------------------------------- ||
+| ----------------- | ----------------------------------------- |
 | ~/.bash_profile   | /Users/Downloads/dotfiles/.bash_profile   |
 | ~/.bashrc         | /Users/Downloads/dotfiles/.bashrc         |
 | ~/.bash_rc        | /Users/Downloads/dotfiles/.bash_rc        |

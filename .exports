@@ -1,7 +1,9 @@
 #---------------------------------------#
 #               Homebrew                #
 #---------------------------------------#
-export PATH="$(brew --prefix)/bin:$PATH"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    export PATH="$(brew --prefix)/bin:$PATH"
+fi
 
 #---------------------------------------#
 #               Misc	                #

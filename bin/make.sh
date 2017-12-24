@@ -1,26 +1,25 @@
 #!/bin/bash
 
-if [ -z "$1" ]
-then
-    echo Usage: `basename $0` folder_name 1>&2
-    exit 1
-else
-    # Variables
-    dir=$1
-    files="bash_profile bashrc bash_rc vimrc vim osx zshrc profile aliases functions exports extras"
+dotfiles_dir="$(dirname "$(pwd)")"
 
-    # Create new dotfiles directory
-    cd ~
-    echo "Creating $dir"
-    mkdir -p $dir
+# Install Antigen
+curl -L git.io/antigen > "$dotfiles_dir/antigen.zsh";
 
-    for file in $files; do
-        # Move existing dotfiles to newly created directory
-        echo "Moving .$file to ~/$dir/"
-        mv ~/.$file ~/$dir/
+files="bash_profile bashrc bash_rc vimrc zshrc profile aliases functions exports extras"
+mac_specific_files="osx"
 
-        # Create symlink to moved dotfiles
-        echo "Symlinking ~/.$file to ~/$dir/.$file"
-        ln -sf ~/$dir/.$file ~/.$file
+function symlink() {
+    echo "Symlinking $2 to $1/.$2"
+    ln -sf $1/.$2 ~/.$2
+}
+
+for file in $files; do
+    symlink $dotfiles_dir $file
+done
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    for mac_specific_files in $mac_specific_file; do
+        symlink $dotfiles_dir $mac_specific_file
     done
 fi
+

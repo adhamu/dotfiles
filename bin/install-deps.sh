@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# ZSH
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-
-# Antigen
-curl -L git.io/antigen > ~/antigen.zsh
-
 # Brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update && brew upgrade
@@ -23,7 +17,7 @@ brew install node
 brew install python3
 
 # NPM packages
-npm install -g yarn gulp bower diff-so-fancy nativefier git-recent localtunnel nodemon pm2 spaceship-zsh-theme
+npm install -g yarn gulp bower diff-so-fancy nativefier git-recent localtunnel nodemon pm2
 
 # Brew packages
 brew cask install google-chrome firefox iterm2 mysqlworkbench sublime-text skype hipchat tunnelblick vlc

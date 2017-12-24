@@ -18,6 +18,7 @@
 - Downloads [Antigen](https://github.com/zsh-users/antigen)
 - Symlinks the following:
 
+
 | Symlink           | Original File                             |
 | ~/.bash_profile   | /Users/Downloads/dotfiles/.bash_profile   |
 | ~/.bashrc         | /Users/Downloads/dotfiles/.bashrc         |

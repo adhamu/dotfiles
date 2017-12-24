@@ -5,11 +5,11 @@ dotfiles_dir="$(dirname "$(pwd)")"
 # Install Antigen
 curl -L git.io/antigen > "$dotfiles_dir/antigen.zsh";
 
-files="bash_profile bashrc bash_rc vimrc zshrc profile aliases functions exports extras"
+files="bash_profile bashrc bash_rc vimrc zshrc profile aliases functions exports"
 mac_specific_files="osx"
 
 function symlink() {
-    echo "Symlinking $2 to $1/.$2"
+    echo "Symlinking .$2 to $1/.$2"
     ln -sf $1/.$2 ~/.$2
 }
 
@@ -22,4 +22,3 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         symlink $dotfiles_dir $mac_specific_file
     done
 fi
-

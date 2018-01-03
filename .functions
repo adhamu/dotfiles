@@ -10,39 +10,6 @@
 # Cyan         0;36     Light Cyan    1;36
 # Light Gray   0;37     White         1;37
 
-#---------------------------------------#
-#               Proxy                   #
-#---------------------------------------#
-RED='\033[0;31m';
-GREEN='\033[0;32m';
-DEFAULT='\033[0m';
-
-function proxy() {
-    PROXY=proxy-dev.cpwos.com:3128;
-
-    if [[ "${http_proxy:-NOTSET}" != "NOTSET" ]]; then
-        unset http_proxy;
-        unset https_proxy;
-        unset HTTP_PROXY;
-        unset HTTPS_PROXY;
-        npm config set http-proxy null;
-        npm config set https-proxy null;
-        git config --global --unset http.proxy;
-        git config --global --unset https.proxy;
-        echo "${RED}PROXY • $PROXY • DISABLED";
-    else
-        export http_proxy=http://$PROXY;
-        export https_proxy=http://$PROXY;
-        export HTTP_PROXY="http://$PROXY";
-        export HTTPS_PROXY="http://$PROXY";
-        npm config set http-proxy "http://$PROXY";
-        npm config set https-proxy "http://$PROXY";
-        git config --global http.proxy http://$PROXY;
-        git config --global https.proxy http://$PROXY;
-        echo "${GREEN}PROXY • $PROXY • ENABLED";
-    fi;
-}
-
 function gitstep() {
     if [ -z "$1" ]; then
         echo "${RED}You need to provide a branch name"

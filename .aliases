@@ -60,3 +60,4 @@ alias iterm_themes="~/Dropbox/iTerm\ Colour\ Schemes/tools/preview.rb ~/Dropbox/
 alias localip="ipconfig getifaddr en0"
 alias genpw="openssl rand -base64 32"
 alias apt="sudo apt-get update -y && sudo apt-get upgrade -y"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"

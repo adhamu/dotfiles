@@ -52,16 +52,6 @@ alias vs="vagrant suspend"
 alias vsh="vagrant ssh"
 
 #---------------------------------------#
-#               OS X                    #
-#---------------------------------------#
-alias show_hidden='defaults write com.apple.finder AppleShowAllFiles -boolean true && killall Finder'
-alias hide_hidden='defaults write com.apple.finder AppleShowAllFiles -boolean false && killall Finder'
-alias show_finder_statusbar="defaults write com.apple.finder ShowStatusBar -bool true;killall Finder"
-alias hide_finder_statusbar="defaults write com.apple.finder ShowStatusBar -bool false;killall Finder"
-alias dl_history="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
-alias delete_dl_history="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
-
-#---------------------------------------#
 #               Misc                    #
 #---------------------------------------#
 alias zsrc='source ~/.zshrc'

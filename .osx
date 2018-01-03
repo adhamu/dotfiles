@@ -84,6 +84,9 @@ open /System/Library/CoreServices/PowerChime.app
 # defaults write com.apple.PowerChime ChimeOnAllHardware -bool false && \
 #killall PowerChime
 
+# Search current directory by default in Finder
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
 #---------------------------------------#
 #           iTerm2 & Terminal           #
 #---------------------------------------#

@@ -10,6 +10,11 @@
 # Cyan         0;36     Light Cyan    1;36
 # Light Gray   0;37     White         1;37
 
+function git_delete_branch() {
+    git branch -D $1
+    git push origin :$1
+}
+
 function gitstep() {
     if [ -z "$1" ]; then
         echo "${RED}You need to provide a branch name"

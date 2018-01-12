@@ -22,3 +22,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         symlink $dotfiles_dir $mac_specific_file
     done
 fi
+
+# Install Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Install Vundle plugins
+vim +PluginInstall +qall

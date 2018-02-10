@@ -10,6 +10,9 @@
 # Cyan         0;36     Light Cyan    1;36
 # Light Gray   0;37     White         1;37
 
+#---------------------------------------#
+#                Git                    #
+#---------------------------------------#
 function git_delete_branch() {
     git branch -D $1
     git push origin :$1
@@ -30,9 +33,56 @@ function gitstep() {
 }
 
 #---------------------------------------#
+#               Docker                  #
+#---------------------------------------#
+function dock_stop() {
+    docker-compose stop && docker-compose rm -f
+}
+
+function dock_start() {
+    docker-compose build && docker-compose up -d
+}
+
+function dock_fresh() {
+    dock_stop && dock_start
+}
+
+function dock_logs() {
+    docker logs $1 -f
+}
+
+function dock_ssh() {
+    docker exec -it $1 /bin/bash
+}
+
+function dock_vol_prune() {
+    docker volume prune
+}
+
+function dock_sys_prune() {
+    docker system prune
+}
+
+function dock_delete_all_containers() {
+    docker rm $(docker ps -a -q)
+}
+
+function dock_delete_all_images() {
+    docker rmi $(docker images -q) --force
+}
+
+function dock_restart() {
+    docker-compose restart $1
+}
+
+function docker_ip() {
+    docker inspect $1 | grep '"IPAddress"'
+}
+
+#---------------------------------------#
 #           Coloured Man Pages          #
 #---------------------------------------#
-man() {
+function man() {
     env \
         LESS_TERMCAP_mb=$(printf "\e[1;31m") \
         LESS_TERMCAP_md=$(printf "\e[1;31m") \

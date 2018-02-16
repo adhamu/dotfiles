@@ -5,7 +5,7 @@ antigen use oh-my-zsh
 antigen bundle git
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    antigen bundle osx
+    #antigen bundle osx
 fi
 
 antigen bundle zsh-users/zsh-autosuggestions

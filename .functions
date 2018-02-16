@@ -75,7 +75,7 @@ function dock_restart() {
     docker-compose restart $1
 }
 
-function docker_ip() {
+function dock_ip() {
     docker inspect $1 | grep '"IPAddress"'
 }
 

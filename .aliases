@@ -5,6 +5,14 @@ alias sf2='php app/console'
 alias sf2clear='php app/console cache:clear'
 
 #---------------------------------------#
+#               zshmarks                #
+#---------------------------------------#
+alias g="jump"
+alias s="bookmark"
+alias d="deletemark"
+alias p="showmarks"
+
+#---------------------------------------#
 #               Laravel                 #
 #---------------------------------------#
 alias art="php artisan"
@@ -13,7 +21,6 @@ alias arthelp="php artisan --help"
 #---------------------------------------#
 #                Git                    #
 #---------------------------------------#
-alias g=git
 alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'

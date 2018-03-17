@@ -2,7 +2,6 @@ source $HOME/dotfiles/antigen.zsh
 source $HOME/.bash_profile
 
 antigen use oh-my-zsh
-antigen bundle git
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     #antigen bundle osx

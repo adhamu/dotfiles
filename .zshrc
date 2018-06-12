@@ -15,6 +15,8 @@ antigen bundle jocelynmallon/zshmarks
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
 
+PURE_PROMPT_SYMBOL=▶
+
 antigen apply
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

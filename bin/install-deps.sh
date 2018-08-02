@@ -17,7 +17,7 @@ brew install node
 brew install python3
 
 # NPM packages
-npm install -g yarn gulp bower diff-so-fancy nativefier git-recent localtunnel nodemon pm2
+npm install -g yarn gulp bower diff-so-fancy nativefier git-recent localtunnel nodemon pm2 taskbook
 
 # Brew packages
 brew cask install google-chrome firefox iterm2 mysqlworkbench sublime-text skype hipchat tunnelblick vlc

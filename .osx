@@ -112,6 +112,13 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 #defaults write com.apple.appstore ShowDebugMenu -bool true
 
 #---------------------------------------#
+#               Safari                  #
+#---------------------------------------#
+
+# Don't reopen windows/tabs from previous session
+defaults write com.apple.Safari NSQuitAlwaysKeepsWindows -bool false
+
+#---------------------------------------#
 #               Aliases                 #
 #---------------------------------------#
 alias show_hidden='defaults write com.apple.finder AppleShowAllFiles -boolean true && killall Finder'

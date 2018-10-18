@@ -69,7 +69,8 @@ npm install -g bower \
                speed-test \
                stylelint \
                taskbook \
-               yarn
+               yarn \
+               hex-rgb-cli
 
 # Composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"

@@ -33727,7 +33727,7 @@
 	<key>EnableRendezvous</key>
 	<false/>
 	<key>FocusFollowsMouse</key>
-	<false/>
+	<true/>
 	<key>FsTabDelay</key>
 	<real>1</real>
 	<key>HiddenAFRStrokeThickness</key>
@@ -33824,17 +33824,17 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>0 127 224 280 0 0 1440 878 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>929 91 445 94 0 0 1440 878 </string>
+	<string>929 33 445 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>280 408 606 456 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>433 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>306 372 796 486 0 0 1440 877 </string>
+	<string>306 378 918 452 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>47 0 1393 877 0 0 1440 900 </string>
+	<string>47 0 1393 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>771 1132 920 826 771 900 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -35771,6 +35771,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/amitdhamu/dotfiles/iTerm2</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -35788,7 +35790,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-09-20T13:32:19Z</date>
+	<date>2018-11-08T09:30:18Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -35842,7 +35844,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.2.1beta5</string>
+	<string>3.2.5beta1</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

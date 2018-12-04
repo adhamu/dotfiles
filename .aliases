@@ -69,3 +69,4 @@ alias genpw="openssl rand -base64 32"
 alias apt="sudo apt-get update -y && sudo apt-get upgrade -y"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias f='open -a Finder ./'
+alias tree='tree -C'

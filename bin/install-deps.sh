@@ -70,4 +70,5 @@ npm install -g diff-so-fancy \
 
 # Cleanup
 brew cleanup
+brew prune
 rm -rf /Library/Caches/Homebrew/*

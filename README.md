@@ -3,7 +3,7 @@
 ## Stuff
 - [Antigen](https://github.com/zsh-users/antigen)
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-- [spaceship-zsh-theme](https://github.com/denysdovhan/spaceship-zsh-theme)
+- [Pure prompt](https://github.com/sindresorhus/pure#antigen)
 - Environment-aware so will only enable macOS plugins where necessary
 
 ## Installation

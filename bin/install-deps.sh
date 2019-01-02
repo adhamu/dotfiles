@@ -66,7 +66,8 @@ npm install -g diff-so-fancy \
                taskbook \
                yarn \
                hex-rgb-cli \
-               fx
+               fx \
+               pm2
 
 # Cleanup
 brew cleanup

@@ -8,6 +8,7 @@ brew update && brew upgrade
 brew install git \
              imagemagick \
              composer \
+             neofetch \
              node \
              p7zip \
              python3 \

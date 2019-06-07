@@ -4,7 +4,7 @@ source $HOME/.bash_profile
 antigen use oh-my-zsh
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    antigen bundle osx
+    #antigen bundle osx
 fi
 
 antigen bundle zsh-users/zsh-autosuggestions

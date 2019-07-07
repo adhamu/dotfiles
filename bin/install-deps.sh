@@ -23,7 +23,6 @@ brew cask install 1clipboard \
                   dropbox \
                   firefox \
                   google-chrome \
-                  google-backup-and-sync \
                   handbrake \
                   iterm2 \
                   itsycal \
@@ -33,12 +32,7 @@ brew cask install 1clipboard \
                   robo-3t \
                   sequel-pro \
                   sip \
-                  sketch \
-                  skype \
-                  skype-for-business \
-                  sourcetree \
                   spectacle \
-                  stride \
                   sublime-text \
                   tunnelblick \
                   vlc \

@@ -33792,6 +33792,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 228.000000, 308.000000, NO, NO</string>
+		<string>0.000000, 309.000000, 228.000000, 48.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
@@ -33831,7 +33836,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>216 374 928 394 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>44 0 1235 777 0 0 1280 777 </string>
+	<string>44 10 1225 767 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>152 45 710 730 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -34519,7 +34524,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Hack-Regular 12</string>
+			<string>Menlo-Regular 11</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>

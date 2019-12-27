@@ -8,6 +8,7 @@ brew update && brew upgrade
 brew install git \
              imagemagick \
              composer \
+             yarn \
              neofetch \
              node \
              p7zip \
@@ -26,12 +27,12 @@ brew cask install 1clipboard \
                   handbrake \
                   iterm2 \
                   itsycal \
-                  kap \
                   microsoft-office \
                   namechanger \
                   robo-3t \
                   sequel-pro \
                   sip \
+                  sophos-anti-virus-home-edition \
                   spectacle \
                   sublime-text \
                   tunnelblick \
@@ -48,21 +49,6 @@ brew cask install qlcolorcode \
                   suspicious-package \
                   quicklookase \
                   qlvideo
-
-# NPM packages
-npm install -g diff-so-fancy \
-               eslint \
-               git-recent \
-               gulp \
-               localtunnel \
-               nativefier \
-               speed-test \
-               stylelint \
-               taskbook \
-               yarn \
-               hex-rgb-cli \
-               fx \
-               pm2
 
 # Cleanup
 brew cleanup

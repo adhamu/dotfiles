@@ -32,7 +32,6 @@ brew cask install 1clipboard \
                   robo-3t \
                   sequel-pro \
                   sip \
-                  sophos-anti-virus-home-edition \
                   spectacle \
                   sublime-text \
                   tunnelblick \

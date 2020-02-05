@@ -25,6 +25,7 @@ brew cask install 1clipboard \
                   firefox \
                   google-chrome \
                   handbrake \
+                  insomnia \
                   iterm2 \
                   itsycal \
                   microsoft-office \

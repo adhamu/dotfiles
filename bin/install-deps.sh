@@ -19,7 +19,6 @@ brew install git \
 
 # Apps
 brew cask install 1clipboard \
-                  colorslurp \
                   daisydisk \
                   docker \
                   dropbox \
@@ -29,6 +28,7 @@ brew cask install 1clipboard \
                   insomnia \
                   iterm2 \
                   itsycal \
+                  menubar-colors \
                   microsoft-office \
                   namechanger \
                   robo-3t \

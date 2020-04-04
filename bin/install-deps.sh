@@ -19,6 +19,7 @@ brew install git \
 
 # Apps
 brew cask install 1clipboard \
+                  colorslurp \
                   daisydisk \
                   docker \
                   dropbox \
@@ -32,7 +33,6 @@ brew cask install 1clipboard \
                   namechanger \
                   robo-3t \
                   sequel-pro \
-                  sip \
                   spectacle \
                   sublime-text \
                   tunnelblick \

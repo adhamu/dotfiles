@@ -37,6 +37,7 @@ brew cask install 1clipboard \
                   sublime-text \
                   tunnelblick \
                   vlc \
+                  vscodium \
                   vnc-viewer
 
 # QuickLook Plugins

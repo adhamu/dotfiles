@@ -19,6 +19,7 @@ brew install git \
 
 # Apps
 brew cask install 1clipboard \
+                  colorslurp \
                   daisydisk \
                   docker \
                   dropbox \
@@ -28,17 +29,16 @@ brew cask install 1clipboard \
                   insomnia \
                   iterm2 \
                   itsycal \
-                  menubar-colors \
                   microsoft-office \
                   namechanger \
+                  rectangle \
                   robo-3t \
                   sequel-pro \
-                  spectacle \
                   sublime-text \
                   tunnelblick \
                   vlc \
-                  vscodium \
-                  vnc-viewer
+                  vnc-viewer \
+                  vscodium
 
 # QuickLook Plugins
 brew cask install qlcolorcode \
@@ -53,5 +53,3 @@ brew cask install qlcolorcode \
 
 # Cleanup
 brew cleanup
-brew prune
-rm -rf /Library/Caches/Homebrew/*

@@ -18,27 +18,29 @@ brew install git \
              youtube-dl
 
 # Apps
-brew cask install 1clipboard \
-                  colorslurp \
-                  daisydisk \
-                  docker \
-                  dropbox \
-                  firefox \
-                  google-chrome \
-                  handbrake \
-                  insomnia \
-                  iterm2 \
-                  itsycal \
-                  microsoft-office \
-                  namechanger \
-                  rectangle \
-                  robo-3t \
-                  sequel-pro \
-                  sublime-text \
-                  tunnelblick \
-                  vlc \
-                  vnc-viewer \
-                  vscodium
+brew install --cask 1clipboard \
+                    daisydisk \
+                    docker \
+                    dropbox \
+                    firefox \
+                    google-chrome \
+                    handbrake \
+                    insomnia \
+                    iterm2 \
+                    itsycal \
+                    microsoft-office \
+                    namechanger \
+                    rectangle \
+                    robo-3t \
+                    slack \
+                    sublime-text \
+                    sublime-merge \
+                    tableplus \
+                    tunnelblick \
+                    vlc \
+                    vnc-viewer \
+                    vscodium \
+                    zoomus
 
 # QuickLook Plugins
 brew cask install qlcolorcode \
@@ -50,6 +52,8 @@ brew cask install qlcolorcode \
                   suspicious-package \
                   quicklookase \
                   qlvideo
+
+ln -sf /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge /usr/local/bin/smerge
 
 # Cleanup
 brew cleanup

@@ -15,7 +15,7 @@ antigen bundle jocelynmallon/zshmarks
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
 
-PURE_PROMPT_SYMBOL="⌘ "
+PURE_PROMPT_SYMBOL="☰ "
 
 antigen apply
 

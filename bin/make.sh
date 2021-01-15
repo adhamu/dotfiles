@@ -24,6 +24,14 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     done
 fi
 
+# Fix "Beep" in macOS
+mkdir ~/Library/KeyBindings
+echo "{
+    \"^@\\\UF701\" = \"noop:\";
+    \"^@\\\UF702\" = \"noop:\";
+    \"^@\\\UF703\" = \"noop:\";
+}" > ~/Library/KeyBindings/DefaultKeyBinding.dict
+
 # Install Vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugins/Vundle.vim
 

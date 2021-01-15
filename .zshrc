@@ -1,11 +1,20 @@
 source $HOME/dotfiles/antigen.zsh
-source $HOME/.bash_profile
+
+for file in ~/.{extras,exports,aliases,functions}; do
+    if [ -f "$file" ];then
+	   source "$file"
+    fi
+done
+unset file
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+autoload -U add-zsh-hook
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
 
 antigen use oh-my-zsh
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    #antigen bundle osx
-fi
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions

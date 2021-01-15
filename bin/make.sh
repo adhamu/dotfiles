@@ -5,7 +5,7 @@ dotfiles_dir="$(dirname "$(pwd)")"
 # Install Antigen
 curl -L git.io/antigen > "$dotfiles_dir/antigen.zsh";
 
-files="bash_profile bashrc bash_rc vimrc zshrc profile aliases functions exports"
+files="vimrc zshrc aliases functions exports"
 mac_specific_files="macos"
 
 function symlink() {
@@ -25,7 +25,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 # Install Vundle
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugins/Vundle.vim
 
 # Install Vundle plugins
 vim +PluginInstall +qall

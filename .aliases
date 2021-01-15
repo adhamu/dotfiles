@@ -1,22 +1,10 @@
 #---------------------------------------#
-#               Symfony                 #
-#---------------------------------------#
-alias sf2='php app/console'
-alias sf2clear='php app/console cache:clear'
-
-#---------------------------------------#
 #               zshmarks                #
 #---------------------------------------#
 alias g="jump"
 alias s="bookmark"
 alias d="deletemark"
 alias p="showmarks"
-
-#---------------------------------------#
-#               Laravel                 #
-#---------------------------------------#
-alias art="php artisan"
-alias arthelp="php artisan --help"
 
 #---------------------------------------#
 #                Git                    #
@@ -26,11 +14,12 @@ alias gaa='git add --all'
 alias gb='git branch'
 alias gc='git commit'
 alias gca='git commit -a'
+alias gcam='git commit -am'
 alias gcb='git checkout -b'
 alias gcf='git config --list'
 alias gco='git checkout'
 alias gcount='git shortlog -sn'
-alias gd='git diff --color | diff-so-fancy'
+alias gd='git diff --color'
 alias gf='git fetch'
 alias gl='git pull'
 alias glg='git log --stat --color'
@@ -43,30 +32,18 @@ alias glog='git log --oneline --decorate --color --graph'
 alias glogme="glog --author='Amit Dhamu'"
 alias glol='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
 alias glola='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --all'
-alias glp=_git_log_prettily
 alias gm='git merge'
 alias gp='git push'
 alias gss='git status -s'
 alias gst='git status'
 
 #---------------------------------------#
-#               Vagrant                 #
-#---------------------------------------#
-alias vu="vagrant up"
-alias vr="vagrant reload"
-alias vp="vagrant provision"
-alias vs="vagrant suspend"
-alias vsh="vagrant ssh"
-
-#---------------------------------------#
 #               Misc                    #
 #---------------------------------------#
 alias zsrc='source ~/.zshrc'
 alias zedit='vim ~/.zshrc'
-alias iterm_themes="~/Dropbox/iTerm\ Colour\ Schemes/tools/preview.rb ~/Dropbox/iTerm\ Colour\ Schemes/schemes/*"
 alias localip="ipconfig getifaddr en0"
 alias genpw="openssl rand -base64 32"
-alias apt="sudo apt-get update -y && sudo apt-get upgrade -y"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias f='open -a Finder ./'
 alias tree='tree -C'

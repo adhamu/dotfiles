@@ -1,4 +1,4 @@
-export NVM_LAZY_LOAD=true
+export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
 
 source $HOME/dotfiles/antigen.zsh
@@ -22,6 +22,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle jocelynmallon/zshmarks
+
 antigen bundle lukechilds/zsh-nvm
 
 antigen bundle mafredri/zsh-async

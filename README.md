@@ -1,10 +1,10 @@
 # My Dotfiles
 
 ## Stuff
+
 - [Antigen](https://github.com/zsh-users/antigen)
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [Pure prompt](https://github.com/sindresorhus/pure#antigen)
-- Environment-aware so will only enable macOS plugins where necessary
 
 ## Installation
 
@@ -15,19 +15,15 @@
 ```
 
 ## What `make.sh` does
+
 - Downloads [Antigen](https://github.com/zsh-users/antigen)
 - Symlinks the following:
 
-
-| Symlink           | Original File                             |
-| ----------------- | ----------------------------------------- |
-| ~/.bash_profile   | /Users/Downloads/dotfiles/.bash_profile   |
-| ~/.bashrc         | /Users/Downloads/dotfiles/.bashrc         |
-| ~/.bash_rc        | /Users/Downloads/dotfiles/.bash_rc        |
-| ~/.vimrc          | /Users/Downloads/dotfiles/.vimrc          |
-| ~/.zshrc          | /Users/Downloads/dotfiles/.zshrc          |
-| ~/.profile        | /Users/Downloads/dotfiles/.profile        |
-| ~/.aliases        | /Users/Downloads/dotfiles/.aliases        |
-| ~/.functions      | /Users/Downloads/dotfiles/.functions      |
-| ~/.exports        | /Users/Downloads/dotfiles/.exports        |
-| ~/.extras         | /Users/Downloads/dotfiles/.extras         |
+| Symlink      | Original File                        |
+| ------------ | ------------------------------------ |
+| ~/.aliases   | /Users/Downloads/dotfiles/.aliases   |
+| ~/.exports   | /Users/Downloads/dotfiles/.exports   |
+| ~/.extras    | /Users/Downloads/dotfiles/.extras    |
+| ~/.functions | /Users/Downloads/dotfiles/.functions |
+| ~/.vimrc     | /Users/Downloads/dotfiles/.vimrc     |
+| ~/.zshrc     | /Users/Downloads/dotfiles/.zshrc     |

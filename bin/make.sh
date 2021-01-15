@@ -33,7 +33,7 @@ echo "{
 }" > ~/Library/KeyBindings/DefaultKeyBinding.dict
 
 # Install Vundle
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugins/Vundle.vim
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim
 
 # Install Vundle plugins
 vim +PluginInstall +qall

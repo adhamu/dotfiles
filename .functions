@@ -32,6 +32,15 @@ function gitstep() {
     fi;
 }
 
+function gdm() {
+    if [ -z "$1" ]; then
+        echo "${RED}You need to enter a commit hash"
+    else
+        HASH=$1;
+        git log --pretty=oneline --abbrev-commit $HASH..HEAD
+    fi;
+}
+
 #---------------------------------------#
 #               Docker                  #
 #---------------------------------------#

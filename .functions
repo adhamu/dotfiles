@@ -56,6 +56,10 @@ function dock_fresh() {
     dock_stop && dock_start
 }
 
+function dock_update() {
+	dock_stop && docker images | grep -v REPOSITORY | awk '{print $1}' | xargs -L1 docker pull && dock_start
+}
+
 function dock_logs() {
     docker logs $1 -f
 }

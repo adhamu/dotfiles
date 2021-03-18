@@ -2,9 +2,8 @@
 
 ## Stuff
 
-- [Antigen](https://github.com/zsh-users/antigen)
-- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-- [Pure prompt](https://github.com/sindresorhus/pure#antigen)
+- [Antibody](https://getantibody.github.io)
+- [Pure prompt](https://github.com/sindresorhus/pure)
 
 ## Installation
 
@@ -16,7 +15,7 @@
 
 ## What `make.sh` does
 
-- Downloads [Antigen](https://github.com/zsh-users/antigen)
+- Downloads [Antibody](https://getantibody.github.io)
 - Symlinks the following:
 
 | Symlink      | Original File                        |

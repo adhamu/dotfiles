@@ -2,8 +2,8 @@
 
 dotfiles_dir="$(dirname "$(pwd)")"
 
-# Install Antigen
-curl -L git.io/antigen > "$dotfiles_dir/antigen.zsh";
+# Install Antibody
+curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
 
 files="vimrc zshrc aliases functions exports"
 mac_specific_files="macos"

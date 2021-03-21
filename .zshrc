@@ -10,6 +10,7 @@ for file in ~/.{extras,exports,aliases,functions}; do
 done
 unset file
 
+antibody bundle robbyrussell/oh-my-zsh
 antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zsh-users/zsh-completions
 antibody bundle zsh-users/zsh-syntax-highlighting

@@ -5,7 +5,8 @@
 brew update && brew upgrade
 
 # Brew packages
-brew install git \
+brew install ack \
+             git \
              imagemagick \
              composer \
              yarn \

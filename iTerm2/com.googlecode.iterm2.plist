@@ -2090,7 +2090,7 @@
 			<key>Normal Font</key>
 			<string>Hack-Regular 12</string>
 			<key>Option Key Sends</key>
-			<integer>2</integer>
+			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>

@@ -15,8 +15,7 @@ brew install ack \
              p7zip \
              python3 \
              ssh-copy-id \
-             wget \
-             youtube-dl
+             wget
 
 # Apps
 brew install --cask 1clipboard \
@@ -44,15 +43,15 @@ brew install --cask 1clipboard \
                     zoomus
 
 # QuickLook Plugins
-brew cask install qlcolorcode \
-                  qlstephen \
-                  qlmarkdown \
-                  quicklook-json \
-                  qlimagesize \
-                  webpquicklook \
-                  suspicious-package \
-                  quicklookase \
-                  qlvideo
+brew install --cask apparency \
+                    qlcolorcode \
+                    qlstephen \
+                    qlmarkdown \
+                    quicklook-json \
+                    qlimagesize \
+                    webpquicklook \
+                    quicklookase \
+                    qlvideo
 
 ln -sf /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge /usr/local/bin/smerge
 

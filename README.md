@@ -10,6 +10,8 @@
 ```
 ➜ git clone https://github.com/adhamu/dotfiles.git
 ➜ cd dotfiles/bin
+➜ ./install-deps.sh
+➜ ./default-file-associations.sh
 ➜ ./make.sh
 ```
 

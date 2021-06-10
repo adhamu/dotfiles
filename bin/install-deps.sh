@@ -6,6 +6,7 @@ brew update && brew upgrade
 
 # Brew packages
 brew install ack \
+             awscli \
              git \
              imagemagick \
              composer \
@@ -54,6 +55,9 @@ brew install --cask apparency \
                     qlvideo
 
 ln -sf /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge /usr/local/bin/smerge
+
+# Node
+npm i aws-cdk -g
 
 # Cleanup
 brew cleanup

@@ -39,7 +39,7 @@ brew install --cask 1clipboard \
                     tunnelblick \
                     vlc \
                     vnc-viewer \
-                    vscodium \
+                    visual-studio-code \
                     zoomus
 
 # QuickLook Plugins

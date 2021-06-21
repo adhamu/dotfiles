@@ -22,6 +22,7 @@ brew install ack \
 # Apps
 brew install --cask 1clipboard \
   daisydisk \
+  brave-browser \
   docker \
   dropbox \
   firefox \

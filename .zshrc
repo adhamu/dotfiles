@@ -15,6 +15,7 @@ antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zsh-users/zsh-completions
 antibody bundle zsh-users/zsh-syntax-highlighting
 antibody bundle jocelynmallon/zshmarks
+antibody bundle djui/alias-tips
 
 antibody bundle lukechilds/zsh-nvm
 

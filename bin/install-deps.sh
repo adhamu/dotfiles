@@ -69,8 +69,8 @@ cd ~/Library/Fonts
 wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip -O Hack.zip
 wget https://github.com/JetBrains/JetBrainsMono/releases/download/v2.242/JetBrainsMono-2.242.zip -O JetBrainsMono.zip
 
-unzip -j Hack.zip '*.ttf'
-unzip -j JetBrainsMono.zip '*.ttf'
+unzip -jo Hack.zip '*.ttf'
+unzip -jo JetBrainsMono.zip '*.ttf'
 
 rm Hack.zip JetBrainsMono.zip
 

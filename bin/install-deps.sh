@@ -25,7 +25,6 @@ brew install \
 
 # Apps
 brew install --cask \
-  daisydisk \
   brave-browser \
   docker \
   dropbox \

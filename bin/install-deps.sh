@@ -63,6 +63,9 @@ brew install --cask \
 
 ln -sf /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge /usr/local/bin/smerge
 
+echo '.DS_Store' >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+
 # Fonts
 cd ~/Library/Fonts
 

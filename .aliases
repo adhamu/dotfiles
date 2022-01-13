@@ -1,14 +1,20 @@
-#---------------------------------------#
-#               zshmarks                #
-#---------------------------------------#
-alias g="jump"
-alias s="bookmark"
+alias ......=../../../../..
+alias .....=../../../..
+alias ....=../../..
+alias ...=../..
+alias 1='cd -1'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+alias 6='cd -6'
+alias 7='cd -7'
+alias 8='cd -8'
+alias 9='cd -9'
+alias _='sudo '
 alias d="deletemark"
-alias p="showmarks"
-
-#---------------------------------------#
-#                Git                    #
-#---------------------------------------#
+alias f='open -a Finder ./'
+alias g="jump"
 alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'
@@ -20,6 +26,7 @@ alias gcf='git config --list'
 alias gco='git checkout'
 alias gcount='git shortlog -sn'
 alias gd='git diff --color'
+alias genpw='openssl rand -base64 32'
 alias gf='git fetch'
 alias gl='git pull'
 alias glg='git log --stat --color'
@@ -29,21 +36,28 @@ alias glgm='git log --graph --max-count=10'
 alias glgp='git log --stat --color -p'
 alias glo='git log --oneline --decorate --color'
 alias glog='git log --oneline --decorate --color --graph'
-alias glogme="glog --author='Amit Dhamu'"
+alias glogme='glog --author='\''Amit Dhamu'\'
 alias glol='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
 alias glola='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --all'
 alias gm='git merge'
 alias gp='git push'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 alias gss='git status -s'
 alias gst='git status'
-
-#---------------------------------------#
-#               Misc                    #
-#---------------------------------------#
-alias zsrc='source ~/.zshrc'
-alias zedit='vim ~/.zshrc'
-alias localip="ipconfig getifaddr en0"
-alias genpw="openssl rand -base64 32"
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias f='open -a Finder ./'
+alias history=omz_history
+alias l='ls -lah'
+alias la='ls -lAh'
+alias ll='ls -lh'
+alias localip='ipconfig getifaddr en0'
+alias ls='ls -G'
+alias lsa='ls -lah'
+alias md='mkdir -p'
+alias p=showmarks
+alias rd=rmdir
+alias run-help=man
+alias s=bookmark
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias tree='tree -C'
+alias which-command=whence
+alias zedit='vim ~/.zshrc'
+alias zsrc='source ~/.zshrc'

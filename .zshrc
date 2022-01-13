@@ -32,5 +32,5 @@ antibody bundle zsh-users/zsh-completions
 antibody bundle jocelynmallon/zshmarks
 antibody bundle djui/alias-tips
 antibody bundle robbyrussell/oh-my-zsh path:lib
-antibody bundle robbyrussell/oh-my-zsh path:plugins/nvm
+antibody bundle lukechilds/zsh-nvm
 antibody bundle zsh-users/zsh-syntax-highlighting

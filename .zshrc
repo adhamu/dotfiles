@@ -6,8 +6,9 @@ for dump in ~/.zcompdump(N.mh+24); do
 done
 compinit -C
 
-export NVM_AUTOLOAD=1
+export STARSHIP_CONFIG=~/.starship.toml
 
+eval "$(starship init zsh)"
 source <(antibody init)
 
 for file in ~/.{extras,exports,aliases,functions}; do
@@ -17,14 +18,19 @@ for file in ~/.{extras,exports,aliases,functions}; do
 done
 unset file
 
+autoload -U add-zsh-hook
+use_nvmrc_version_automatically() {
+  if [[ -f .nvmrc ]]; then
+    nvm use $(cat .nvmrc)
+  fi
+}
+add-zsh-hook chpwd use_nvmrc_version_automatically
+use_nvmrc_version_automatically
+
 antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zsh-users/zsh-completions
 antibody bundle jocelynmallon/zshmarks
 antibody bundle djui/alias-tips
-antibody bundle robbyrussell/oh-my-zsh path:plugins/nvm
 antibody bundle robbyrussell/oh-my-zsh path:lib
-antibody bundle mafredri/zsh-async
-antibody bundle sindresorhus/pure
+antibody bundle robbyrussell/oh-my-zsh path:plugins/nvm
 antibody bundle zsh-users/zsh-syntax-highlighting
-
-PURE_PROMPT_SYMBOL="▶ "

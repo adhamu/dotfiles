@@ -19,6 +19,7 @@ brew install \
   p7zip \
   python3 \
   ssh-copy-id \
+  starship \
   tree \
   yarn \
   wget

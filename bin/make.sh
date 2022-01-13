@@ -5,7 +5,7 @@ dotfiles_dir="$(dirname "$(pwd)")"
 # Install Antibody
 curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
 
-files="vimrc zshrc aliases functions exports"
+files="vimrc zshrc aliases functions exports starship.toml"
 mac_specific_files="macos"
 
 function symlink() {

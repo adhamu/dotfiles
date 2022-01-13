@@ -4354,19 +4354,6 @@
 					<integer>1</integer>
 					<key>auto-rainbow style</key>
 					<integer>0</integer>
-					<key>background color</key>
-					<dict>
-						<key>Alpha Component</key>
-						<real>1</real>
-						<key>Blue Component</key>
-						<real>0.24193000793457031</real>
-						<key>Color Space</key>
-						<string>sRGB</string>
-						<key>Green Component</key>
-						<real>0.15796536207199097</real>
-						<key>Red Component</key>
-						<real>0.061840765178203583</real>
-					</dict>
 					<key>default text color</key>
 					<dict>
 						<key>Alpha Component</key>
@@ -4416,19 +4403,6 @@
 								<integer>1</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
-								<key>background color</key>
-								<dict>
-									<key>Alpha Component</key>
-									<real>1</real>
-									<key>Blue Component</key>
-									<real>0.24193000793457031</real>
-									<key>Color Space</key>
-									<string>sRGB</string>
-									<key>Green Component</key>
-									<real>0.15796536207199097</real>
-									<key>Red Component</key>
-									<real>0.061840765178203583</real>
-								</dict>
 								<key>default text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -4480,19 +4454,6 @@
 								<integer>1</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
-								<key>background color</key>
-								<dict>
-									<key>Alpha Component</key>
-									<real>1</real>
-									<key>Blue Component</key>
-									<real>0.24193000793457031</real>
-									<key>Color Space</key>
-									<string>sRGB</string>
-									<key>Green Component</key>
-									<real>0.15796536207199097</real>
-									<key>Red Component</key>
-									<real>0.061840765178203583</real>
-								</dict>
 								<key>default text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -4544,19 +4505,6 @@
 								<integer>1</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
-								<key>background color</key>
-								<dict>
-									<key>Alpha Component</key>
-									<real>1</real>
-									<key>Blue Component</key>
-									<real>0.24193000793457031</real>
-									<key>Color Space</key>
-									<string>sRGB</string>
-									<key>Green Component</key>
-									<real>0.15796536207199097</real>
-									<key>Red Component</key>
-									<real>0.061840765178203583</real>
-								</dict>
 								<key>default text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -4612,19 +4560,6 @@
 								<integer>1</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
-								<key>background color</key>
-								<dict>
-									<key>Alpha Component</key>
-									<real>1</real>
-									<key>Blue Component</key>
-									<real>0.24193000793457031</real>
-									<key>Color Space</key>
-									<string>sRGB</string>
-									<key>Green Component</key>
-									<real>0.15796536207199097</real>
-									<key>Red Component</key>
-									<real>0.061840765178203583</real>
-								</dict>
 								<key>default text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -4676,19 +4611,6 @@
 								<integer>1</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
-								<key>background color</key>
-								<dict>
-									<key>Alpha Component</key>
-									<real>1</real>
-									<key>Blue Component</key>
-									<real>0.24193000793457031</real>
-									<key>Color Space</key>
-									<string>sRGB</string>
-									<key>Green Component</key>
-									<real>0.15796536207199097</real>
-									<key>Red Component</key>
-									<real>0.061840765178203583</real>
-								</dict>
 								<key>default text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -4744,19 +4666,6 @@
 								<integer>1</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
-								<key>background color</key>
-								<dict>
-									<key>Alpha Component</key>
-									<real>1</real>
-									<key>Blue Component</key>
-									<real>0.24193000793457031</real>
-									<key>Color Space</key>
-									<string>sRGB</string>
-									<key>Green Component</key>
-									<real>0.15796536207199097</real>
-									<key>Red Component</key>
-									<real>0.061840765178203583</real>
-								</dict>
 								<key>default text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -4892,7 +4801,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>0</integer>
+	<integer>3</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 </dict>

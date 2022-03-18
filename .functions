@@ -46,6 +46,10 @@ function use_nvmrc_version_automatically() {
     fi
 }
 
+function csv() {
+    sed 's/,/ ,/g' "$@" | column -ts, | less -FSXK
+}
+
 #---------------------------------------#
 #               Docker                  #
 #---------------------------------------#

@@ -32,10 +32,10 @@ sudo nvram SystemAudioVolume=" "
 
 # Remove the sleep image file to save disk space
 # sudo rm /Private/var/vm/sleepimage
-  # Create a zero-byte file instead…
-  # sudo touch /Private/var/vm/sleepimage
-  # …and make sure it can’t be rewritten
-  # sudo chflags uchg /Private/var/vm/sleepimage
+# Create a zero-byte file instead…
+# sudo touch /Private/var/vm/sleepimage
+# …and make sure it can’t be rewritten
+# sudo chflags uchg /Private/var/vm/sleepimage
 
 # Disable the sudden motion sensor as it’s not useful for SSDs
 #sudo pmset -a sms 0
@@ -77,8 +77,8 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # Play iOS charging sound when MagSafe connected
-defaults write com.apple.PowerChime ChimeOnAllHardware -bool true && \
-open /System/Library/CoreServices/PowerChime.app
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool true &&
+  open /System/Library/CoreServices/PowerChime.app
 
 # Disable iOS charging sound when MagSafe connected
 # defaults write com.apple.PowerChime ChimeOnAllHardware -bool false && \

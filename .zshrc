@@ -19,11 +19,6 @@ done
 unset file
 
 autoload -U add-zsh-hook
-use_nvmrc_version_automatically() {
-  if [[ -f .nvmrc ]]; then
-    nvm use $(cat .nvmrc)
-  fi
-}
 add-zsh-hook chpwd use_nvmrc_version_automatically
 use_nvmrc_version_automatically
 

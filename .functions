@@ -22,23 +22,28 @@ function gitstep() {
     if [ -z "$1" ]; then
         echo "${RED}You need to provide a branch name"
     else
-        BRANCH=$1;
-        echo "${GREEN}Stepping through branch: ${BRANCH}";
-        for commit in $(git rev-list ${BRANCH} --reverse)
-        do
+        BRANCH=$1
+        echo "${GREEN}Stepping through branch: ${BRANCH}"
+        for commit in $(git rev-list ${BRANCH} --reverse); do
             git checkout $commit
-            read;
-        done;
-    fi;
+            read
+        done
+    fi
 }
 
 function gdm() {
     if [ -z "$1" ]; then
         echo "${RED}You need to enter a commit hash"
     else
-        HASH=$1;
+        HASH=$1
         git log --pretty=oneline --abbrev-commit $HASH..HEAD
-    fi;
+    fi
+}
+
+function use_nvmrc_version_automatically() {
+    if [[ -f .nvmrc ]]; then
+        nvm use $(cat .nvmrc)
+    fi
 }
 
 #---------------------------------------#
@@ -57,7 +62,7 @@ function dock_fresh() {
 }
 
 function dock_update() {
-	dock_stop && docker images | grep -v REPOSITORY | awk '{print $1}' | xargs -L1 docker pull && dock_start
+    dock_stop && docker images | grep -v REPOSITORY | awk '{print $1}' | xargs -L1 docker pull && dock_start
 }
 
 function dock_logs() {
@@ -104,5 +109,5 @@ function man() {
         LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
         LESS_TERMCAP_ue=$(printf "\e[0m") \
         LESS_TERMCAP_us=$(printf "\e[1;32m") \
-            man "$@"
+        man "$@"
 }

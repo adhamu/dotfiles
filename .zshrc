@@ -8,7 +8,6 @@ compinit -C
 
 export STARSHIP_CONFIG=~/.starship.toml
 
-eval "$(starship init zsh)"
 source <(antibody init)
 
 for file in ~/.{extras,exports,aliases,functions}; do
@@ -18,14 +17,12 @@ for file in ~/.{extras,exports,aliases,functions}; do
 done
 unset file
 
-autoload -U add-zsh-hook
-add-zsh-hook chpwd use_nvmrc_version_automatically
-use_nvmrc_version_automatically
+eval "$(starship init zsh)"
+eval "$(fnm env --use-on-cd)"
 
 antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zsh-users/zsh-completions
 antibody bundle jocelynmallon/zshmarks
 antibody bundle djui/alias-tips
 antibody bundle robbyrussell/oh-my-zsh path:lib
-antibody bundle lukechilds/zsh-nvm
 antibody bundle zsh-users/zsh-syntax-highlighting

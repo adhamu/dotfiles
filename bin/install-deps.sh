@@ -11,6 +11,7 @@ brew install \
   awscli \
   composer \
   duti \
+  fnm \
   git \
   imagemagick \
   jq \

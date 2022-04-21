@@ -11,12 +11,18 @@ $nix_shell\
 $python\
 $sudo\
 $cmd_duration\
+$nodejs\
 $line_break\
 $jobs\
 $time\
 $status\
 $shell\
 $character"""
+
+command_timeout = 1000
+
+[nodejs]
+format = "[$version](bold green)"
 
 [directory]
 truncate_to_repo = false

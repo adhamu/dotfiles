@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 duti -s com.microsoft.VSCode .conf all
 duti -s com.microsoft.VSCode .css all

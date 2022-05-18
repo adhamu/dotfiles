@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 dotfiles_dir="$(dirname "$(pwd)")"
 

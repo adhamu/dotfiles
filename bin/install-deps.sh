@@ -7,8 +7,12 @@ brew update && brew upgrade
 # Brew packages
 brew install \
   ack \
+  awscli \
+  aws-cdk \
+  aws-sam-cli \
   alt-tab \
   awscli \
+  cfn-lint \
   composer \
   duti \
   fnm \
@@ -82,9 +86,6 @@ unzip -jo JetBrainsMono.zip '*.ttf'
 rm Hack.zip JetBrainsMono.zip
 
 cd -;
-
-# Node
-npm i aws-cdk -g
 
 # Cleanup
 brew cleanup

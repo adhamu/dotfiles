@@ -14,7 +14,7 @@ function symlink() {
 }
 
 for file in $files; do
-    rm ~/.$file
+    rm -f ~/.$file
     symlink $dotfiles_dir $file
 done
 

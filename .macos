@@ -116,6 +116,7 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 #---------------------------------------#
 
 # Don't reopen windows/tabs from previous session
+sudo chmod -w ~/Library/Saved\ Application\ State/com.apple.Safari.savedState
 defaults write com.apple.Safari NSQuitAlwaysKeepsWindows -bool false
 
 #---------------------------------------#

@@ -54,7 +54,7 @@ brew install --cask \
   tableplus \
   visual-studio-code \
   vlc \
-  zoomus
+  zoom
 
 # QuickLook Plugins
 brew install --cask \

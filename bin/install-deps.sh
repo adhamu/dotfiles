@@ -54,7 +54,6 @@ brew install --cask \
   tableplus \
   visual-studio-code \
   vlc \
-  vnc-viewer \
   zoomus
 
 # QuickLook Plugins

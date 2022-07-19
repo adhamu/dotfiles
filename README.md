@@ -12,8 +12,8 @@
 ➜ cd dotfiles/bin
 ➜ ./install-deps.sh
 ➜ ./default-file-associations.sh
-➜ ./git-config.sh
 ➜ ./make.sh
+➜ ./git-config.sh
 ```
 
 ## What `make.sh` does

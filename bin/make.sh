@@ -3,22 +3,23 @@
 # Install Antibody
 curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
 
-files="vimrc zshrc aliases functions exports starship.toml"
-mac_specific_files="macos"
+DOTFILES="$(dirname "$(pwd)")"
+FILES="vimrc zshrc aliases functions exports starship.toml"
+MAC_SPECIFIC_FILES="macos"
 
 function symlink() {
-    echo "Symlinking .$1 to $HOME/dotfiles/.$1"
-    ln -sf $HOME/dotfiles/.$1 ~/.$1
+    echo "Symlinking .$1 --> $DOTFILES/.$1"
+    ln -sf $DOTFILES/.$1 ~/.$1
 }
 
-for file in $files; do
-    rm -f ~/.$file
-    symlink $file
+for FILE in $FILES; do
+    rm -f ~/.$FILE
+    symlink $FILE
 done
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    for mac_specific_files in $mac_specific_file; do
-        symlink $mac_specific_file
+    for MAC_SPECIFIC_FILE in $MAC_SPECIFIC_FILES; do
+        symlink $MAC_SPECIFIC_FILE
     done
 fi
 

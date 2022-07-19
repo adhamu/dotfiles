@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+DOTFILES="$(dirname "$(pwd)")"
+
 # Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update && brew upgrade
-brew bundle --verbose --file $HOME/dotfiles/Brewfile
+brew bundle --verbose --file $DOTFILES/Brewfile
 
 ln -sf /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge /usr/local/bin/smerge
 

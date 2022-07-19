@@ -48,11 +48,11 @@ function csv() {
 #               Docker                  #
 #---------------------------------------#
 function dock_stop() {
-    docker-compose stop && docker-compose rm -f
+    docker compose stop && docker compose rm -f
 }
 
 function dock_start() {
-    docker-compose build && docker-compose up -d
+    docker compose build && docker compose up -d
 }
 
 function dock_fresh() {
@@ -88,7 +88,7 @@ function dock_delete_all_images() {
 }
 
 function dock_restart() {
-    docker-compose restart $1
+    docker compose restart $1
 }
 
 function dock_ip() {

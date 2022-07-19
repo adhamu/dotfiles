@@ -3,70 +3,7 @@
 # Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update && brew upgrade
-
-brew tap aws/tap
-
-# Brew packages
-brew install \
-  ack \
-  awscli \
-  aws-cdk \
-  aws-sam-cli \
-  alt-tab \
-  awscli \
-  cfn-lint \
-  composer \
-  duti \
-  fnm \
-  git \
-  imagemagick \
-  jq \
-  neofetch \
-  node \
-  p7zip \
-  python3 \
-  ssh-copy-id \
-  starship \
-  tree \
-  yarn \
-  wget
-
-# Apps
-brew install --cask \
-  brave-browser \
-  docker \
-  dropbox \
-  firefox \
-  google-chrome \
-  google-drive \
-  handbrake \
-  hiddenbar \
-  insomnia \
-  iterm2 \
-  itsycal \
-  microsoft-office \
-  menubar-colors \
-  namechanger \
-  rectangle \
-  robo-3t \
-  slack \
-  sublime-merge \
-  tableplus \
-  visual-studio-code \
-  vlc \
-  zoom
-
-# QuickLook Plugins
-brew install --cask \
-  apparency \
-  qlcolorcode \
-  qlstephen \
-  qlmarkdown \
-  quicklook-json \
-  qlimagesize \
-  webpquicklook \
-  quicklookase \
-  qlvideo
+brew bundle --verbose --file $HOME/dotfiles/Brewfile
 
 ln -sf /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge /usr/local/bin/smerge
 

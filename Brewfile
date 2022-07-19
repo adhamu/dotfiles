@@ -50,7 +50,6 @@ cask 'zoom'
 
 # Quicklook Plugins
 cask 'apparency'
-cask 'alt-tab'
 cask 'qlcolorcode'
 cask 'qlstephen'
 cask 'qlmarkdown'

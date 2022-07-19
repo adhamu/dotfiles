@@ -3,7 +3,7 @@
 ## Stuff
 
 - [Antibody](https://getantibody.github.io)
-- [Pure prompt](https://github.com/sindresorhus/pure)
+- [Starship prompt](https://starship.rs)
 
 ## Installation
 
@@ -12,6 +12,7 @@
 ➜ cd dotfiles/bin
 ➜ ./install-deps.sh
 ➜ ./default-file-associations.sh
+➜ ./git-config.sh
 ➜ ./make.sh
 ```
 

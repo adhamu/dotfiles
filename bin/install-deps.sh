@@ -70,11 +70,6 @@ brew install --cask \
 
 ln -sf /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge /usr/local/bin/smerge
 
-# gitignore_global
-echo '.DS_Store' >> ~/.gitignore_global
-echo 'yarn-error.log' >> ~/.gitignore_global
-git config --global core.excludesfile ~/.gitignore_global
-
 # Fonts
 cd ~/Library/Fonts
 
@@ -90,3 +85,5 @@ cd -;
 
 # Cleanup
 brew cleanup
+
+echo "✅ Dependencies"

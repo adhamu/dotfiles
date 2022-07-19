@@ -32,3 +32,5 @@ duti -s com.microsoft.VSCode public.plain-text all
 duti -s com.microsoft.VSCode public.python-script all
 duti -s com.microsoft.VSCode public.shell-script all
 duti -s com.microsoft.VSCode public.source-code all
+
+echo "✅ Default file associations"

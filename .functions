@@ -95,6 +95,10 @@ function dock_ip() {
     docker inspect $1 | grep '"IPAddress"'
 }
 
+function speedtest() {
+    curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -
+}
+
 #---------------------------------------#
 #           Coloured Man Pages          #
 #---------------------------------------#

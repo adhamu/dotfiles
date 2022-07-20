@@ -26,3 +26,5 @@ source "$(dirname "$0")/make.sh"
 
 exec zsh
 source ~/.zshrc
+
+ssh-keygen

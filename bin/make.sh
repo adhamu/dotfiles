@@ -19,8 +19,19 @@ git config --global core.excludesfile ~/.gitignore_global
 
 echo "✅ Git config"
 
+# Vundle
+rm -rf ~/.vim/plugin/Vundle.vim
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim
+cp $DOTFILES/.vim/plugins.vim ~/.vim/
+vim +PluginInstall +qall
+
+echo "✅ VIM"
+
 # Dotfiles
 echo "Creating symlinks..."
+
+FILES="vimrc zshrc aliases functions exports starship.toml"
+MAC_SPECIFIC_FILES="macos"
 
 function createSymlinks() {
   for FILE in $@; do
@@ -38,10 +49,3 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 echo "✅ Symlinks"
-
-# Vundle
-rm -rf ~/.vim/plugin/Vundle.vim
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim
-vim +PluginInstall +qall
-
-echo "✅ VIM"

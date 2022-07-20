@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
-DOTFILES="$(dirname "$(pwd)")"
+source "$(dirname "$0")/bootstrap.sh"
 
 # Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew update && brew upgrade
 brew bundle --verbose --file $DOTFILES/Brewfile
+brew update && brew upgrade
+brew cleanup
 
+# Sublime Merge Symlink
 ln -sf /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge /usr/local/bin/smerge
 
 # Fonts
@@ -20,9 +22,8 @@ unzip -jo JetBrainsMono.zip '*.ttf'
 
 rm Hack.zip JetBrainsMono.zip
 
-cd -;
+cd -
 
-# Cleanup
-brew cleanup
+xcode-select --install || true
 
 echo "✅ Dependencies"

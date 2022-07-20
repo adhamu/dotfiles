@@ -10,6 +10,10 @@
 # Cyan         0;36     Light Cyan    1;36
 # Light Gray   0;37     White         1;37
 
+RED='\033[0;31m';
+GREEN='\033[0;32m';
+DEFAULT='\033[0m';
+
 #---------------------------------------#
 #                Git                    #
 #---------------------------------------#
@@ -21,23 +25,26 @@ function git_delete_branch() {
 function gitstep() {
     if [ -z "$1" ]; then
         echo "${RED}You need to provide a branch name"
-    else
-        BRANCH=$1
-        echo "${GREEN}Stepping through branch: ${BRANCH}"
-        for commit in $(git rev-list ${BRANCH} --reverse); do
-            git checkout $commit
-            read
-        done
+        return
     fi
+
+    BRANCH=$1
+
+    echo "${GREEN}Stepping through branch: ${BRANCH}"
+
+    for commit in $(git rev-list ${BRANCH} --reverse); do
+        git checkout $commit
+        read
+    done
 }
 
 function gdm() {
     if [ -z "$1" ]; then
-        echo "${RED}You need to enter a commit hash"
-    else
-        HASH=$1
-        git log --pretty=oneline --abbrev-commit $HASH..HEAD
+        echo "${RED}You need to provide a commit hash"
+        return
     fi
+
+    git log --pretty=oneline --abbrev-commit $1..HEAD
 }
 
 function csv() {

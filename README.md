@@ -13,7 +13,6 @@
 ➜ ./install-deps.sh
 ➜ ./default-file-associations.sh
 ➜ ./make.sh
-➜ ./git-config.sh
 ```
 
 ## What `make.sh` does

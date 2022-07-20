@@ -1,46 +1,57 @@
 #!/usr/bin/env bash
 
-# Install Antibody
-curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
+source "$(dirname "$0")/bootstrap.sh"
 
-DOTFILES="$(dirname "$(pwd)")"
-FILES="vimrc zshrc aliases functions exports starship.toml"
-MAC_SPECIFIC_FILES="macos"
+# Git
+read -p "Name: " FULL_NAME
+read -p "Email address: " EMAIL_ADDRESS
 
-function symlink() {
-    echo "Symlinking .$1 --> $DOTFILES/.$1"
-    ln -sf $DOTFILES/.$1 ~/.$1
+git config --global user.name "$FULL_NAME"
+git config --global user.email "$EMAIL_ADDRESS"
+
+git config --global pull.rebase false
+git config --global init.defaultBranch main
+
+grep -qxF '.DS_Store' ~/.gitignore_global || echo '.DS_Store' >>~/.gitignore_global
+grep -qxF 'yarn-error.log' ~/.gitignore_global || echo 'yarn-error.log' >>~/.gitignore_global
+
+git config --global core.excludesfile ~/.gitignore_global
+
+echo "✅ Git config"
+
+# Dotfiles
+echo "Creating symlinks..."
+
+function createSymlinks() {
+    for FILE in $@; do
+        echo "  ~/.${FILE} --> ${DOTFILES}/.${FILE}"
+
+        mv ~/.$FILE ~/.$FILE.bak
+        ln -sf $DOTFILES/.$FILE ~/.$FILE
+    done
 }
 
-for FILE in $FILES; do
-    rm -f ~/.$FILE
-    symlink $FILE
-done
+createSymlinks $FILES
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    for MAC_SPECIFIC_FILE in $MAC_SPECIFIC_FILES; do
-        symlink $MAC_SPECIFIC_FILE
-    done
+    createSymlinks $MAC_SPECIFIC_FILES
 fi
 
-exec zsh
-
-echo "✅ Dotfiles"
+echo "✅ Symlinks"
 
 # Fix "Beep" in macOS
-mkdir ~/Library/KeyBindings
+mkdir -p ~/Library/KeyBindings
 echo "{
     \"^@\\\UF701\" = \"noop:\";
     \"^@\\\UF702\" = \"noop:\";
     \"^@\\\UF703\" = \"noop:\";
 }" >~/Library/KeyBindings/DefaultKeyBinding.dict
 
-echo "✅ macOS VSCode 'Beep'"
+echo "✅ macOS VSCode Beep"
 
-# Install Vundle
+# Vundle
+rm -rf ~/.vim/plugin/Vundle.vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim
-
-# Install Vundle plugins
 vim +PluginInstall +qall
 
 echo "✅ VIM"

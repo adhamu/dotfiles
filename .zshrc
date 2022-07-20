@@ -10,8 +10,8 @@ export STARSHIP_CONFIG=~/.starship.toml
 
 source <(antibody init)
 
-for file in ~/.{extras,exports,aliases,functions}; do
-  if [ -f "$file" ];then
+for file in $HOME/.{extras,exports,aliases,functions}; do
+  if [ -f "$file" ]; then
     source "$file"
   fi
 done

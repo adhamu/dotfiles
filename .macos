@@ -126,15 +126,5 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 #---------------------------------------#
 
 # Don't reopen windows/tabs from previous session
-sudo chmod -w ~/Library/Saved\ Application\ State/com.apple.Safari.savedState
+chflags uchg  ~/Library/Saved\ Application\ State/com.apple.Safari.savedState
 defaults write com.apple.Safari NSQuitAlwaysKeepsWindows -bool false
-
-#---------------------------------------#
-#               Aliases                 #
-#---------------------------------------#
-alias show_hidden='defaults write com.apple.finder AppleShowAllFiles -boolean true && killall Finder'
-alias hide_hidden='defaults write com.apple.finder AppleShowAllFiles -boolean false && killall Finder'
-alias show_finder_statusbar="defaults write com.apple.finder ShowStatusBar -bool true;killall Finder"
-alias hide_finder_statusbar="defaults write com.apple.finder ShowStatusBar -bool false;killall Finder"
-alias dl_history="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
-alias delete_dl_history="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"

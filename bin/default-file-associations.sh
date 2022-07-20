@@ -19,6 +19,7 @@ duti -s com.microsoft.VSCode .sass all
 duti -s com.microsoft.VSCode .scss all
 duti -s com.microsoft.VSCode .sh all
 duti -s com.microsoft.VSCode .sql all
+duti -s com.microsoft.VSCode .tf all
 duti -s com.microsoft.VSCode .ts all
 duti -s com.microsoft.VSCode .tsx all
 duti -s com.microsoft.VSCode .txt all

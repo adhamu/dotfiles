@@ -3,6 +3,7 @@ tap 'aws/tap'
 
 # Binaries
 brew 'ack'
+brew 'antibody'
 brew 'awscli'
 brew 'aws-cdk'
 brew 'aws-sam-cli'

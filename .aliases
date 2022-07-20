@@ -1,3 +1,6 @@
+#---------------------------------------#
+#               Navigate	              #
+#---------------------------------------#
 alias ......=../../../../..
 alias .....=../../../..
 alias ....=../../..
@@ -11,10 +14,19 @@ alias 6='cd -6'
 alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
-alias _='sudo '
-alias d="deletemark"
 alias f='open -a Finder ./'
+
+#---------------------------------------#
+#               zshmarks	              #
+#---------------------------------------#
 alias g="jump"
+alias d="deletemark"
+alias p=showmarks
+alias s=bookmark
+
+#---------------------------------------#
+#                 Git	                  #
+#---------------------------------------#
 alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'
@@ -41,23 +53,29 @@ alias glol='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Cre
 alias glola='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --all'
 alias gm='git merge'
 alias gp='git push'
-alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 alias gss='git status -s'
 alias gst='git status'
-alias history=omz_history
+
+#---------------------------------------#
+#                 macOS	                #
+#---------------------------------------#
+alias show_hidden='defaults write com.apple.finder AppleShowAllFiles -boolean true && killall Finder'
+alias hide_hidden='defaults write com.apple.finder AppleShowAllFiles -boolean false && killall Finder'
+alias show_finder_statusbar="defaults write com.apple.finder ShowStatusBar -bool true;killall Finder"
+alias hide_finder_statusbar="defaults write com.apple.finder ShowStatusBar -bool false;killall Finder"
+alias dl_history="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
+alias delete_dl_history="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+#---------------------------------------#
+#                 Misc	                #
+#---------------------------------------#
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+alias localip='ipconfig getifaddr en0'
 alias l='ls -lah'
 alias la='ls -lAh'
 alias ll='ls -lh'
-alias localip='ipconfig getifaddr en0'
 alias ls='ls -G'
 alias lsa='ls -lah'
-alias md='mkdir -p'
-alias p=showmarks
-alias rd=rmdir
-alias run-help=man
-alias s=bookmark
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias tree='tree -C'
-alias which-command=whence
 alias zedit='vim ~/.zshrc'
 alias zsrc='source ~/.zshrc'

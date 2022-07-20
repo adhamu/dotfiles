@@ -7,24 +7,41 @@
 
 ## Installation
 
-```
-➜ git clone https://github.com/adhamu/dotfiles.git
-➜ cd dotfiles/bin
-➜ ./install-deps.sh
-➜ ./default-file-associations.sh
-➜ ./make.sh
+```shell
+git clone https://github.com/adhamu/dotfiles.git
+cd dotfiles
 ```
 
-## What `make.sh` does
+## Usage
 
-- Downloads [Antibody](https://getantibody.github.io)
-- Symlinks the following:
+### Everything
 
-| Symlink      | Original File                        |
-| ------------ | ------------------------------------ |
-| ~/.aliases   | /Users/Downloads/dotfiles/.aliases   |
-| ~/.exports   | /Users/Downloads/dotfiles/.exports   |
-| ~/.extras    | /Users/Downloads/dotfiles/.extras    |
-| ~/.functions | /Users/Downloads/dotfiles/.functions |
-| ~/.vimrc     | /Users/Downloads/dotfiles/.vimrc     |
-| ~/.zshrc     | /Users/Downloads/dotfiles/.zshrc     |
+This is only recommended when setting up a brand new (fresh) macOS machine
+
+```shell
+bin/fresh.sh
+```
+
+---
+
+### Manual
+
+You can selectively run these as required
+
+#### Dependencies (macOS only)
+
+```shell
+bin/install-deps.sh
+```
+
+#### Default file associations (macOS only)
+
+```shell
+bin/default-file-associations.sh
+```
+
+#### Global git configuration, VIM and symlinking dotfiles (universal)
+
+```shell
+bin/make.sh
+```

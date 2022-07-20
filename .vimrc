@@ -25,11 +25,11 @@ set gdefault
 set encoding=utf-8 nobomb
 " Change mapleader
 let mapleader=","
-" Don’t add empty newlines at the end of files
+" Do not add empty newlines at the end of files
 set binary
 set noeol
 
-" Don’t create backups when editing files in certain directories
+" Do not create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
 
 " Respect modeline in files
@@ -61,17 +61,17 @@ set laststatus=2
 set mouse=a
 " Disable error bells
 set noerrorbells
-" Don’t reset cursor to start of line when moving around.
+" Do not reset cursor to start of line when moving around.
 set nostartofline
 " Show the cursor position
 set ruler
-" Don’t show the intro message when starting Vim
+" Do not show the intro message when starting Vim
 set shortmess=atI
 " Show the current mode
 set showmode
 " Show the filename in the window titlebar
 set title
-" Show the (partial) command as it’s being typed
+" Show the (partial) command as its being typed
 set showcmd
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3

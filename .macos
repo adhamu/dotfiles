@@ -7,13 +7,6 @@ osascript -e 'tell application "System Preferences" to quit'
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do
-  sudo -n true
-  sleep 60
-  kill -0 "$$" || exit
-done 2>/dev/null &
-
 # Borrowed from Paul Irish (https://github.com/paulirish/dotfiles)
 
 #---------------------------------------#
@@ -35,10 +28,7 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 #defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
-
-# Show the /Volumes folder
-chflags nohidden /Volumes
+chflags nohidden ~/Library
 
 # Scrollbars
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
@@ -200,7 +190,6 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 for app in "Activity Monitor" \
   "Dock" \
   "Finder" \
-  "Safari" \
   "SystemUIServer"; do
   killall "${app}" &>/dev/null
 done

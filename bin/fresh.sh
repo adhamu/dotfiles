@@ -18,7 +18,6 @@ if [[ $CONFIRM != "Y" ]]; then
 fi
 
 sudo -v
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 source "$(dirname "$0")/install-deps.sh"
 source "$(dirname "$0")/default-file-associations.sh"
@@ -27,4 +26,8 @@ source "$(dirname "$0")/make.sh"
 exec zsh
 source ~/.zshrc
 
-ssh-keygen
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  source ~/.macos
+fi
+
+[[ ! -f ~/.ssh/id_rsa ]] && ssh-keygen

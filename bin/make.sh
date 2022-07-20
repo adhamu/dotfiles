@@ -12,9 +12,6 @@ git config --global user.email "$EMAIL_ADDRESS"
 git config --global pull.rebase false
 git config --global init.defaultBranch main
 
-grep -qxF '.DS_Store' ~/.gitignore_global || echo '.DS_Store' >>~/.gitignore_global
-grep -qxF 'yarn-error.log' ~/.gitignore_global || echo 'yarn-error.log' >>~/.gitignore_global
-
 git config --global core.excludesfile ~/.gitignore_global
 
 echo "✅ Git config"
@@ -30,7 +27,7 @@ echo "✅ VIM"
 # Dotfiles
 echo "Creating symlinks..."
 
-FILES="vimrc zshrc aliases functions exports starship.toml"
+FILES="vimrc zshrc aliases functions exports gitignore_global starship.toml"
 MAC_SPECIFIC_FILES="macos"
 
 function createSymlinks() {

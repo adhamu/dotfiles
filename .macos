@@ -187,6 +187,16 @@ defaults write com.apple.Safari NSQuitAlwaysKeepsWindows -bool false
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+#---------------------------------------#
+#         Fix "Beep" in macOS           #
+#---------------------------------------#
+mkdir -p ~/Library/KeyBindings
+echo "{
+    \"^@\\\UF701\" = \"noop:\";
+    \"^@\\\UF702\" = \"noop:\";
+    \"^@\\\UF703\" = \"noop:\";
+}" >~/Library/KeyBindings/DefaultKeyBinding.dict
+
 for app in "Activity Monitor" \
   "Dock" \
   "Finder" \

@@ -23,31 +23,21 @@ echo "✅ Git config"
 echo "Creating symlinks..."
 
 function createSymlinks() {
-    for FILE in $@; do
-        echo "  ~/.${FILE} --> ${DOTFILES}/.${FILE}"
+  for FILE in $@; do
+    echo "  ~/.${FILE} --> ${DOTFILES}/.${FILE}"
 
-        mv ~/.$FILE ~/.$FILE.bak
-        ln -sf $DOTFILES/.$FILE ~/.$FILE
-    done
+    mv ~/.$FILE ~/.$FILE.bak
+    ln -sf $DOTFILES/.$FILE ~/.$FILE
+  done
 }
 
 createSymlinks $FILES
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    createSymlinks $MAC_SPECIFIC_FILES
+  createSymlinks $MAC_SPECIFIC_FILES
 fi
 
 echo "✅ Symlinks"
-
-# Fix "Beep" in macOS
-mkdir -p ~/Library/KeyBindings
-echo "{
-    \"^@\\\UF701\" = \"noop:\";
-    \"^@\\\UF702\" = \"noop:\";
-    \"^@\\\UF703\" = \"noop:\";
-}" >~/Library/KeyBindings/DefaultKeyBinding.dict
-
-echo "✅ macOS VSCode Beep"
 
 # Vundle
 rm -rf ~/.vim/plugin/Vundle.vim

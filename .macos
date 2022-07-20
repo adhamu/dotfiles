@@ -8,7 +8,11 @@ osascript -e 'tell application "System Preferences" to quit'
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do
+  sudo -n true
+  sleep 60
+  kill -0 "$$" || exit
+done 2>/dev/null &
 
 # Borrowed from Paul Irish (https://github.com/paulirish/dotfiles)
 
@@ -20,8 +24,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo nvram SystemAudioVolume=" "
 
 # Expand save panel by default
-#defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-#defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
@@ -29,6 +33,41 @@ sudo nvram SystemAudioVolume=" "
 
 # Check for software updates daily, not just once per week
 #defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Show the ~/Library folder
+chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+
+# Show the /Volumes folder
+chflags nohidden /Volumes
+
+# Scrollbars
+# Possible values: `WhenScrolling`, `Automatic` and `Always`
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+#---------------------------------------#
+#           Dock/Hot Corners            #
+#---------------------------------------#
+
+# Set the icon size of Dock items to 36 pixels
+defaults write com.apple.dock tilesize -int 34
+
+# Change minimize/maximize window effect
+defaults write com.apple.dock mineffect -string "scale"
+
+# Minimize windows into their application’s icon
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
+
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
+# set bottom left hot corner to start screen saver
+defaults write com.apple.dock wvous-bl-corner -int 5
 
 #---------------------------------------#
 #         SSD Specific Tweaks           #
@@ -71,7 +110,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 
 # Finder: allow text selection in Quick Look
-#defaults write com.apple.finder QLEnableTextSelection -bool true
+defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -97,12 +136,14 @@ defaults write com.apple.PowerChime ChimeOnAllHardware -bool true &&
 # Search current directory by default in Finder
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-#---------------------------------------#
-#           iTerm2 & Terminal           #
-#---------------------------------------#
+# Set sidebar icon size to small
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
-# Don’t display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+# Show icons for hard drives, servers, and removable media on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 #---------------------------------------#
 #           Activity Monitor           #
@@ -125,6 +166,41 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 #               Safari                  #
 #---------------------------------------#
 
+# Show the full URL in the address bar (note: this still hides the scheme)
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+# Prevent Safari from opening ‘safe’ files automatically after downloading
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+
+# Enable Safari’s debug menu
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+# Update extensions automatically
+defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
+
+# Set Safari’s home page to `about:blank` for faster loading
+defaults write com.apple.Safari HomePage -string "https://start.amitd.co"
+
 # Don't reopen windows/tabs from previous session
-chflags uchg  ~/Library/Saved\ Application\ State/com.apple.Safari.savedState
+chflags uchg ~/Library/Saved\ Application\ State/com.apple.Safari.savedState
 defaults write com.apple.Safari NSQuitAlwaysKeepsWindows -bool false
+
+#---------------------------------------#
+#           Terminal/iTerm              #
+#---------------------------------------#
+
+# Don’t display the annoying prompt when quitting iTerm
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+for app in "Activity Monitor" \
+  "Dock" \
+  "Finder" \
+  "Safari" \
+  "SystemUIServer"; do
+  killall "${app}" &>/dev/null
+done

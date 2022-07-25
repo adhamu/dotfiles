@@ -22,6 +22,13 @@ function git_delete_branch() {
   git push origin :$1
 }
 
+function git_branch() {
+  git branch |
+    cut -c 3- |
+    fzf --height 40% --multi --preview="git log {} --" |
+    xargs git checkout
+}
+
 function gitstep() {
   if [ -z "$1" ]; then
     echo "${RED}You need to provide a branch name"

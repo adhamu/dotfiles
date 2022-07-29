@@ -12,6 +12,9 @@ git config --global user.email "$EMAIL_ADDRESS"
 git config --global pull.rebase false
 git config --global init.defaultBranch main
 
+echo '.DS_Store' >>~/.gitignore_global
+echo 'yarn-error.log' >>~/.gitignore_global
+
 git config --global core.excludesfile ~/.gitignore_global
 
 echo "✅ Git config"

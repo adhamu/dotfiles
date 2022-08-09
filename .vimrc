@@ -4,7 +4,7 @@ so ~/.vim/plugins.vim
 
 syntax on
 set nu
-colorscheme peachpuff
+colorscheme default
 set backspace=2
 
 " Make Vim more useful

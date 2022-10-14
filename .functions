@@ -127,3 +127,11 @@ function man() {
     LESS_TERMCAP_us=$(printf "\e[1;32m") \
     man "$@"
 }
+
+#---------------------------------------#
+#                 Misc                  #
+#---------------------------------------#
+
+function to_gif() {
+  ffmpeg -i $1 -pix_fmt rgb8 -r 10 $2 && gifsicle -O3 $2 -o $2
+}

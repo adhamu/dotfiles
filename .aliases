@@ -55,6 +55,7 @@ alias gm='git merge'
 alias gp='git push'
 alias gss='git status -s'
 alias gst='git status'
+alias gundo='git reset HEAD^'
 
 #---------------------------------------#
 #                 macOS	                #

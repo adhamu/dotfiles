@@ -1,5 +1,6 @@
 # Taps
 tap 'aws/tap'
+tap 'oven-sh/bun'
 
 # Binaries
 brew 'ack'
@@ -9,6 +10,7 @@ brew 'aws-sam-cli'
 brew 'awscli'
 brew 'awscli'
 brew 'bat'
+brew 'bun'
 brew 'cfn-lint'
 brew 'composer'
 brew 'duti'

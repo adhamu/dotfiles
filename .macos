@@ -178,6 +178,9 @@ defaults write com.apple.Safari HomePage -string "https://start.amitd.co"
 
 # Don't reopen windows/tabs from previous session
 chflags uchg ~/Library/Saved\ Application\ State/com.apple.Safari.savedState
+chflags uchg ~/Library/Containers/com.apple.Safari/Data/Library/Safari/SafariTabs.db
+chflags uchg ~/Library/Containers/com.apple.Safari/Data/Library/Safari/SafariTabs.db-shm
+chflags uchg ~/Library/Containers/com.apple.Safari/Data/Library/Safari/SafariTabs.db-wal
 defaults write com.apple.Safari NSQuitAlwaysKeepsWindows -bool false
 
 #---------------------------------------#

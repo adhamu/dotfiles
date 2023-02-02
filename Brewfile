@@ -47,13 +47,11 @@ cask 'microsoft-office'
 cask 'namechanger'
 cask 'rectangle'
 cask 'runjs'
-cask 'robo-3t'
 cask 'slack'
 cask 'sublime-merge'
 cask 'tableplus'
 cask 'visual-studio-code'
 cask 'vlc'
-cask 'zoom'
 
 # Quicklook Plugins
 cask 'apparency'

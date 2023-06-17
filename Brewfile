@@ -31,7 +31,6 @@ brew 'wget'
 brew 'yarn'
 
 # Apps
-cask 'arc'
 cask 'brave-browser'
 cask 'docker'
 cask 'dropbox'

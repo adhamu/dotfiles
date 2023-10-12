@@ -29,6 +29,12 @@ function git_branch() {
     xargs git checkout
 }
 
+function old_branches() {
+  git remote prune origin
+
+  git for-each-ref --format="%(authorname) %(refname:short) %(committerdate:relative)" refs/remotes/origin --sort=committerdate --no-merged=main | grep -i 'amit'
+}
+
 function gitstep() {
   if [ -z "$1" ]; then
     echo "${RED}You need to provide a branch name"

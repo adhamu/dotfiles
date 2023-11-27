@@ -29,6 +29,12 @@ function git_branch() {
     xargs git checkout
 }
 
+function git_squash() {
+  git reset --soft main
+  git add -A
+  git commit -a
+}
+
 function old_branches() {
   git remote prune origin
 

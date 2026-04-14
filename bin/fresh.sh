@@ -23,11 +23,14 @@ source "$(dirname "$0")/install-deps.sh"
 source "$(dirname "$0")/default-file-associations.sh"
 source "$(dirname "$0")/make.sh"
 
-exec zsh
-source ~/.zshrc
+exec zsh -lc '
+  source ~/.zshrc
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  source ~/.macos
-fi
+  if [[ "$OSTYPE" == darwin* ]]; then
+    source "$(dirname "$0")/../.macos"
+  fi
 
-[[ ! -f ~/.ssh/id_rsa ]] && ssh-keygen
+  [[ ! -f ~/.ssh/id_rsa ]] && ssh-keygen
+
+  exec zsh -l
+'

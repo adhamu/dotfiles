@@ -26,3 +26,6 @@ antibody bundle jocelynmallon/zshmarks
 antibody bundle djui/alias-tips
 antibody bundle robbyrussell/oh-my-zsh path:lib
 antibody bundle zsh-users/zsh-syntax-highlighting
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"

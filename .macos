@@ -56,6 +56,13 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
+# Keep the Dock on the left edge of the screen
+defaults write com.apple.dock orientation -string "left"
+
+# Enable Dock magnification and use a larger magnified size
+defaults write com.apple.dock magnification -bool true
+defaults write com.apple.dock largesize -int 94
+
 # set bottom left hot corner to start screen saver
 defaults write com.apple.dock wvous-bl-corner -int 5
 
@@ -112,6 +119,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
+# Show hidden files in Finder
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
@@ -126,6 +136,22 @@ defaults write com.apple.PowerChime ChimeOnAllHardware -bool true &&
 # Search current directory by default in Finder
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
+# Open new Finder windows in the home directory
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+
+# Keep Finder search results in list view
+defaults write com.apple.finder FXPreferredSearchViewStyle -string "Nlsv"
+
+# Group Finder items by kind by default
+defaults write com.apple.finder FXPreferredGroupBy -string "Kind"
+
+# Keep recent tags hidden in Finder
+defaults write com.apple.finder ShowRecentTags -bool false
+
+# Sort folders first in Finder
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
 # Set sidebar icon size to small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
@@ -134,6 +160,60 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+# Desktop icon view defaults
+defaults write com.apple.finder DesktopViewSettings -dict \
+  GroupBy Kind \
+  IconViewSettings '{
+    arrangeBy = name;
+    backgroundColorBlue = 1;
+    backgroundColorGreen = 1;
+    backgroundColorRed = 1;
+    backgroundType = 0;
+    gridOffsetX = 0;
+    gridOffsetY = 0;
+    gridSpacing = 80;
+    iconSize = 44;
+    labelOnBottom = 0;
+    showIconPreview = 1;
+    showItemInfo = 1;
+    textSize = 12;
+    viewOptionsVersion = 1;
+  }'
+
+# Standard Finder window view defaults
+defaults write com.apple.finder StandardViewSettings -dict \
+  IconViewSettings '{
+    arrangeBy = none;
+    backgroundColorBlue = 1;
+    backgroundColorGreen = 1;
+    backgroundColorRed = 1;
+    backgroundType = 0;
+    gridOffsetX = 0;
+    gridOffsetY = 0;
+    gridSpacing = 54;
+    iconSize = 64;
+    labelOnBottom = 1;
+    showIconPreview = 1;
+    showItemInfo = 0;
+    textSize = 12;
+    viewOptionsVersion = 1;
+  }' \
+  GalleryViewSettings '{
+    arrangeBy = name;
+    iconSize = 48;
+    showIconPreview = 1;
+    viewOptionsVersion = 1;
+  }' \
+  ExtendedListViewSettingsV2 '{
+    calculateAllSizes = 1;
+    iconSize = 16;
+    showIconPreview = 1;
+    sortColumn = name;
+    textSize = 12;
+    useRelativeDates = 1;
+    viewOptionsVersion = 1;
+  }'
 
 #---------------------------------------#
 #           Activity Monitor           #

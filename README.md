@@ -8,8 +8,8 @@
 ## Installation
 
 ```shell
-git clone https://github.com/adhamu/dotfiles.git
-cd dotfiles
+git clone https://github.com/adhamu/dotfiles.git ~/dotfiles
+cd ~/dotfiles
 ```
 
 ## Usage

@@ -1,5 +1,6 @@
 # Taps
 tap 'aws/tap'
+tap 'hashicorp/tap'
 tap 'oven-sh/bun'
 
 # Binaries
@@ -29,7 +30,7 @@ brew 'python3'
 brew 'shfmt'
 brew 'ssh-copy-id'
 brew 'starship'
-brew 'terraform'
+brew 'hashicorp/tap/terraform'
 brew 'tflint'
 brew 'tree'
 brew 'uv'

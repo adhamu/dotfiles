@@ -2,7 +2,7 @@
 
 ## Stuff
 
-- [Antibody](https://getantibody.github.io)
+- [Antidote](https://antidote.sh)
 - [Starship prompt](https://starship.rs)
 
 ## Installation

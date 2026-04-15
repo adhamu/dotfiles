@@ -1,0 +1,6 @@
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+jocelynmallon/zshmarks
+djui/alias-tips
+ohmyzsh/ohmyzsh path:lib
+zsh-users/zsh-syntax-highlighting

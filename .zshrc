@@ -8,7 +8,14 @@ compinit -C
 
 export STARSHIP_CONFIG=~/.starship.toml
 
-source <(antibody init)
+for antidote in \
+  /opt/homebrew/opt/antidote/share/antidote/antidote.zsh \
+  /usr/local/opt/antidote/share/antidote/antidote.zsh; do
+  if [[ -r "$antidote" ]]; then
+    source "$antidote"
+    break
+  fi
+done
 
 for file in $HOME/.{extras,exports,aliases,functions}; do
   if [ -f "$file" ]; then
@@ -20,12 +27,9 @@ unset file
 eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
 
-antibody bundle zsh-users/zsh-autosuggestions
-antibody bundle zsh-users/zsh-completions
-antibody bundle jocelynmallon/zshmarks
-antibody bundle djui/alias-tips
-antibody bundle robbyrussell/oh-my-zsh path:lib
-antibody bundle zsh-users/zsh-syntax-highlighting
+if (( $+functions[antidote] )); then
+  antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
+fi
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"

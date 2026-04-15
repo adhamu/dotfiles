@@ -4,7 +4,7 @@ tap 'oven-sh/bun'
 
 # Binaries
 brew 'ack'
-brew 'antibody'
+brew 'antidote'
 brew 'aws-cdk'
 brew 'aws-sam-cli'
 brew 'awscli'

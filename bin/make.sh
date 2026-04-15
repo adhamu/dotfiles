@@ -19,7 +19,7 @@ echo "✅ Git config"
 # Dotfiles
 echo "Creating symlinks..."
 
-FILES="vimrc zshrc aliases functions exports starship.toml"
+FILES="vimrc zshrc zsh_plugins.txt aliases functions exports starship.toml"
 MAC_SPECIFIC_FILES="macos"
 
 function createSymlinks() {

@@ -63,7 +63,6 @@ cask 'vlc'
 # Quicklook Plugins
 cask 'apparency'
 cask 'qlcolorcode'
-cask 'qlimagesize'
 cask 'qlmarkdown'
 cask 'qlstephen'
 cask 'qlvideo'
